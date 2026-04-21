@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Dope Caesar - Afrobeats | Elevate the Night</title>
+    <meta name="description" content="🎧 THE ULTIMATE AFROBEATS SELECTION
+
+Dope Caesar drops HEAVYWEIGHT AFROBEATS from the Lagos scene, blending Afrobeats with Amapiano energy.
+
+From the deep vaults of Afro influences to modern club twists, this is the essential rotation for this style. SAVE the vibe to keep your library moving. LIKE the playlist if you want the energy to stay LOUD.
+">
+    
+    <meta property="og:title" content="Dope Caesar - Afrobeats | Elevate the Night">
+    <meta property="og:description" content="🎧 THE ULTIMATE AFROBEATS SELECTION
+
+Dope Caesar drops HEAVYWEIGHT AFROBEATS from the Lagos scene, blending Afrobeats with Amapiano energy.
+
+From the deep vaults of Afro influences to modern club twists, this is the essential rotation for this style. SAVE the vibe to keep your library moving. LIKE the playlist if you want the energy to stay LOUD.
+">
+    <meta property="og:image" content="https://cdn-images.dzcdn.net/images/cover/dea349cb3169760660b18fe7f0f8afe1-6f5c4d512b5115fb101e13e688fc7fd8-3208072ca7af2913cacf001dbb11bbec-08304eb172098540c635de98530d4929/1000x1000-000000-80-0-0.jpg">
+    <meta property="og:type" content="music.playlist">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TON_ID_GA"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'TON_ID_GA');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicPlaylist",
+      "name": "Dope Caesar",
+      "creator": {
+        "@type": "Person",
+        "name": "Gounet"
+      },
+      "image": "https://cdn-images.dzcdn.net/images/cover/dea349cb3169760660b18fe7f0f8afe1-6f5c4d512b5115fb101e13e688fc7fd8-3208072ca7af2913cacf001dbb11bbec-08304eb172098540c635de98530d4929/1000x1000-000000-80-0-0.jpg",
+      "description": "Lien vers les plateformes de streaming pour la sélection de Dope Caesar."
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-overlay: rgba(15, 15, 15, 0.85);
+            --card: rgb(0, 0, 0);
+            --text: #ffffff;
+            --subtext: #a0a0a0;
+        }
+
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background-color: #0f0f0f;
+            color: var(--text); 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-start; /* Aligne le contenu vers le haut */
+            min-height: 100vh; 
+            margin: 0; 
+            overflow-x: hidden;
+        }
+
+        /* ----- L'effet de Fond Flouté ----- */
+        .background-blur {
+            position: fixed;   /* Reste fixe derrière le contenu qui défile */
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            /* Injecte l'image 1000x1000 ici */
+            background-image: url('https://cdn-images.dzcdn.net/images/cover/dea349cb3169760660b18fe7f0f8afe1-6f5c4d512b5115fb101e13e688fc7fd8-3208072ca7af2913cacf001dbb11bbec-08304eb172098540c635de98530d4929/1000x1000-000000-80-0-0.jpg');
+            background-size: cover;          /* Couvre tout l'écran */
+            background-position: center;     /* Centre l'image */
+            filter: blur(20px);              /* Force du flou (ajuste si besoin) */
+            -webkit-filter: blur(20px);      /* Pour Safari */
+            transform: scale(1.1);           /* Grandit légèrement l'image pour cacher les bords nets du flou */
+            z-index: -2;                     /* Place tout derrière */
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: var(--bg-overlay);
+            z-index: -1;
+        }
+
+        .container { 
+            width: 95%; 
+            max-width: 400px; 
+            text-align: center; 
+            padding: 20px 20px 40px 20px; /* Réduit le haut à 20px au lieu de 40px */
+            position: relative;
+            z-index: 1;
+            margin-top: 5vh; /* Ajoute une petite marge flexible (5% de la hauteur de l'écran) */
+        }
+
+        .cover { 
+            width: 50%;          
+            max-width: 240px;   
+            min-width: 150px;
+            aspect-ratio: 1 / 1; 
+            border-radius: 12px; 
+            margin-bottom: 25px; 
+            object-fit: cover;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+        }
+
+        .artist-crop {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 20px auto;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            aspect-ratio: 4 / 1; 
+        }
+
+        .artist-crop img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            object-position: 50% 75%; 
+        }
+
+        .link-card { 
+            background: var(--card); 
+            display: flex; 
+            align-items: center; 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            color: white; 
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: all 0.2s ease-in-out;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .link-card:hover { background: rgba(40, 40, 40, 0.95); transform: translateY(-2px); border-color: rgba(255,255,255,0.15); }
+
+        .platform-icon { 
+            width: 32px;
+            height: 32px; 
+            margin-right: 15px; 
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .platform-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+        .platform-name { flex-grow: 1; text-align: left; font-weight: 600; font-size: 1rem; }
+
+        .btn-play { font-size: 0.7rem; color: var(--subtext); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        .amazon-icon-bg {
+            background-color: #ffffff !important;
+            padding: 3px;
+            box-sizing: border-box;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-blur"></div>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <img src="https://cdn-images.dzcdn.net/images/cover/dea349cb3169760660b18fe7f0f8afe1-6f5c4d512b5115fb101e13e688fc7fd8-3208072ca7af2913cacf001dbb11bbec-08304eb172098540c635de98530d4929/1000x1000-000000-80-0-0.jpg" alt="Cover Dope Caesar" class="cover">
+    <div class="artist-crop">
+    <img src="https://pub-cdn.apitemplate.io/2026/04/631ac49e-971a-4021-a4ca-b99a9a001020/Intro.jpeg" alt="Dope Caesar">
+    </div>
+
+        <a href="https://open.spotify.com/playlist/5tVw9Wjx0xgILn4dpuf22V" class="link-card">
+            <div class="platform-icon"><img src="https://cdn.simpleicons.org/spotify/1DB954" alt="Spotify"></div>
+            <span class="platform-name">Spotify</span>
+            <span class="btn-play">Play</span>
+        </a>
+
+        <a href="https://www.youtube.com/playlist?list=PL6C0oh__XypTSwTX6Pc5haBmWqnsCgO42" class="link-card">
+            <div class="platform-icon"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube"></div>
+            <span class="platform-name">YouTube</span>
+            <span class="btn-play">Play</span>
+        </a>
+
+        <a href="https://www.deezer.com/en/playlist/15057206123" class="link-card">
+            <div class="platform-icon"><img src="https://cdn.simpleicons.org/deezer/A238FF" alt="Deezer"></div>
+            <span class="platform-name">Deezer</span>
+            <span class="btn-play">Play</span>
+        </a>
+
+    </div>
+</body>
+</html>
