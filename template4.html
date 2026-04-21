@@ -114,12 +114,13 @@
 
         .artist-crop img {
             width: 100%;
+            /* On force le ratio original de ton fichier 1080x1920 */
+            aspect-ratio: 1080 / 1920; 
             height: auto;
             position: absolute;
             bottom: -155%; 
             left: 0;
         }
-
         .link-card { 
             background: var(--card); 
             display: flex; 
