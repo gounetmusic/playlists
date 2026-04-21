@@ -39,7 +39,7 @@
     <style>
         :root {
             --bg-overlay: rgba(15, 15, 15, 0.85);
-            --card: rgba(26, 26, 26, 0.9);
+            --card: rgb(0, 0, 0);
             --text: #ffffff;
             --subtext: #a0a0a0;
         }
@@ -100,25 +100,25 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.7);
         }
 
-.artist-crop {
-    width: 100%;
-    max-width: 400px;
-    height: 100px; 
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto 30px auto;
-    border-radius: 8px;
-    display: block;
-    background-color: #1a1a1a; /* Pour voir le bloc même si l'image bug */
-}
+        .artist-crop {
+            width: 100%;
+            max-width: 400px;
+            height: 100px; 
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto 30px auto;
+            border-radius: 8px;
+            display: block;
+            background-color: #1a1a1a; /* Pour voir le bloc même si l'image bug */
+        }
 
-.artist-crop img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: -458px; 
-    left: 0;
-}
+        .artist-crop img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: -456px; 
+            left: 0;
+        }
 
         .link-card { 
             background: var(--card); 
