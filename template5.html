@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ArtistName}} Selection - GounetMusic</title>
+    <meta name="description" content="Écoutez la sélection exclusive de {{ArtistName}} sur Spotify, YouTube, Deezer et Amazon Music.">
+    
+    <meta property="og:title" content="{{ArtistName}} Selection - GounetMusic">
+    <meta property="og:description" content="Le meilleur de la musique sélectionné par {{ArtistName}}.">
+    <meta property="og:image" content="{{CoverURL}}">
+    <meta property="og:type" content="music.playlist">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=TON_ID_GA"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'TON_ID_GA');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicPlaylist",
+      "name": "Selection {{ArtistName}}",
+      "creator": {
+        "@type": "Person",
+        "name": "Gounet"
+      },
+      "image": "{{CoverURL}}",
+      "description": "Lien vers les plateformes de streaming pour la sélection de {{ArtistName}}."
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-overlay: rgba(15, 15, 15, 0.85);
+            --card: rgb(0, 0, 0);
+            --text: #ffffff;
+            --subtext: #a0a0a0;
+        }
+
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background-color: #0f0f0f;
+            color: var(--text); 
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-start; /* Aligne le contenu vers le haut */
+            min-height: 100vh; 
+            margin: 0; 
+            overflow-x: hidden;
+        }
+
+        /* ----- L'effet de Fond Flouté ----- */
+        .background-blur {
+            position: fixed;   /* Reste fixe derrière le contenu qui défile */
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            /* Injecte l'image 1000x1000 ici */
+            background-image: url('https://cdn-images.dzcdn.net/images/cover/eddd8a5647dd76bd00cd620f0e69ffe1-f970e7ca583bc9b0cc2d663282c06b48-3b1a11e69d2e926810b0de27da8a9755-bc03050e859da9cb06ebae8c11f8a140/1000x1000-000000-80-0-0.jpg');
+            background-size: cover;          /* Couvre tout l'écran */
+            background-position: center;     /* Centre l'image */
+            filter: blur(20px);              /* Force du flou (ajuste si besoin) */
+            -webkit-filter: blur(20px);      /* Pour Safari */
+            transform: scale(1.1);           /* Grandit légèrement l'image pour cacher les bords nets du flou */
+            z-index: -2;                     /* Place tout derrière */
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: var(--bg-overlay);
+            z-index: -1;
+        }
+
+        .container { 
+            width: 95%; 
+            max-width: 400px; 
+            text-align: center; 
+            padding: 20px 20px 40px 20px; /* Réduit le haut à 20px au lieu de 40px */
+            position: relative;
+            z-index: 1;
+            margin-top: 5vh; /* Ajoute une petite marge flexible (5% de la hauteur de l'écran) */
+        }
+
+        .cover { 
+            width: 50%;           /* Elle prend la moitié de la largeur du container */
+            max-width: 240px;     /* On met une limite pour qu'elle ne devienne pas géante sur iPad */
+            min-width: 150px;     /* On met une limite pour qu'elle ne soit pas minuscule sur petit téléphone */
+            aspect-ratio: 1 / 1;  /* Force le carré parfait */
+            border-radius: 12px; 
+            margin-bottom: 25px; 
+            object-fit: cover;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+        }
+
+        .artist-crop {
+            width: 100%;
+            max-width: 400px;
+            height: 100px; 
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto 20px auto;
+            border-radius: 8px;
+            display: block;
+            background-color: #1a1a1a; /* Pour voir le bloc même si l'image bug */
+        }
+
+        .artist-crop img {
+            width: 100%;
+            /* On force le ratio original de ton fichier 1080x1920 */
+            aspect-ratio: 1080 / 1920; 
+            height: auto;
+            position: absolute;
+            top: -460%; 
+            left: 0;
+        }
+        .link-card { 
+            background: var(--card); 
+            display: flex; 
+            align-items: center; 
+            padding: 14px 18px; 
+            margin-bottom: 12px; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            color: white; 
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: all 0.2s ease-in-out;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .link-card:hover { background: rgba(40, 40, 40, 0.95); transform: translateY(-2px); border-color: rgba(255,255,255,0.15); }
+
+        .platform-icon { 
+            width: 32px;
+            height: 32px; 
+            margin-right: 15px; 
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .platform-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+        .platform-name { flex-grow: 1; text-align: left; font-weight: 600; font-size: 1rem; }
+
+        .btn-play { font-size: 0.7rem; color: var(--subtext); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        .amazon-icon-bg {
+            background-color: #ffffff !important;
+            padding: 3px;
+            box-sizing: border-box;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-blur"></div>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <img src="https://cdn-images.dzcdn.net/images/cover/eddd8a5647dd76bd00cd620f0e69ffe1-f970e7ca583bc9b0cc2d663282c06b48-3b1a11e69d2e926810b0de27da8a9755-bc03050e859da9cb06ebae8c11f8a140/1000x1000-000000-80-0-0.jpg" alt="Cover {{ArtistName}}" class="cover">
+    <div class="artist-crop">
+    <img src="https://pub-cdn.apitemplate.io/2026/04/122baa29-70f7-436e-8a5e-2c83c2b226ce/Intro.jpeg" alt="{{ArtistName}}">
+    </div>
+
+        <a href="{{URL_Spotify}}" class="link-card">
+            <div class="platform-icon"><img src="https://cdn.simpleicons.org/spotify/1DB954" alt="Spotify"></div>
+            <span class="platform-name">Spotify</span>
+            <span class="btn-play">Play</span>
+        </a>
+
+        <a href="{{URL_YouTube}}" class="link-card">
+            <div class="platform-icon"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube"></div>
+            <span class="platform-name">YouTube</span>
+            <span class="btn-play">Play</span>
+        </a>
+
+        <a href="{{URL_Deezer}}" class="link-card">
+            <div class="platform-icon"><img src="https://cdn.simpleicons.org/deezer/A238FF" alt="Deezer"></div>
+            <span class="platform-name">Deezer</span>
+            <span class="btn-play">Play</span>
+        </a>
+
+        <a href="{{URL_Amazon}}" class="link-card">
+            <div class="platform-icon amazon-icon-bg"><img src="https://cloudinary-cdn.ffm.to/s--Qpi3CZYi--/w_64,h_64,c_limit/f_png/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_amazon_without_text_new_branding.png" alt="Amazon Music"></div>
+            <span class="platform-name">Amazon Music</span>
+            <span class="btn-play">Play</span>
+        </a>
+
+    </div>
+</body>
+</html>
