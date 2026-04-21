@@ -100,22 +100,22 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.7);
         }
 
-        /* Le conteneur qui définit la zone visible (230px de haut) */
-        .artist-name-crop {
-            width: 100%;            /* Prend toute la largeur du container (max 400px) */
-            height: 230px;          /* La hauteur calculée après tes crops */
-            overflow: hidden;       /* Cache tout ce qui dépasse */
+        .artist-title-crop {
+            width: 100%;
+            height: 120px; /* Ajuste la hauteur de ta "fenêtre" ici */
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
             position: relative;
-            margin-bottom: 35px;    /* Remplace la marge du H1 */
-            border-radius: 8px;     /* Optionnel : un petit arrondi pour le style */
         }
 
-        /* L'image à l'intérieur que l'on décale vers le haut */
-        .artist-name-crop img {
+        .artist-title-crop img {
+            width: 100%;
+            height: auto;
             position: absolute;
-            width: 100%;            /* L'image s'adapte à la largeur du conteneur */
-            height: auto;           /* Garde les proportions 1080x1920 */
-            top: -466px;           /* On remonte l'image de 1260px pour "crop" le haut */
+            /* On utilise des pourcentages pour que ça marche sur TOUS les écrans */
+            /* -65% correspond environ à tes 1260px sur l'image d'origine */
+            top: -65%; 
             left: 0;
         }
 
