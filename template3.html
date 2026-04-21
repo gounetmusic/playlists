@@ -100,22 +100,22 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.7);
         }
 
-        .artist-title-crop {
+        .artist-crop {
             width: 100%;
-            height: 120px; /* Ajuste la hauteur de ta "fenêtre" ici */
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 30px;
+            max-width: 400px;
+            height: 100px; /* Ta fenêtre de vision */
+            overflow: hidden; /* Force la coupe du bas */
             position: relative;
+            margin: 0 auto 30px auto;
+            border-radius: 8px;
+            display: block;
         }
 
-        .artist-title-crop img {
-            width: 100%;
+        .artist-crop img {
+            width: 100%; /* Force l'image à ne pas dépasser la largeur du cadre */
             height: auto;
             position: absolute;
-            /* On utilise des pourcentages pour que ça marche sur TOUS les écrans */
-            /* -65% correspond environ à tes 1260px sur l'image d'origine */
-            top: -65%; 
+            top: -480px; /* Ajuste cette valeur pour le crop du haut */
             left: 0;
         }
 
@@ -164,7 +164,7 @@
     <div class="background-overlay"></div>
     <div class="container">
         <img src="https://cdn-images.dzcdn.net/images/cover/eddd8a5647dd76bd00cd620f0e69ffe1-f970e7ca583bc9b0cc2d663282c06b48-3b1a11e69d2e926810b0de27da8a9755-bc03050e859da9cb06ebae8c11f8a140/1000x1000-000000-80-0-0.jpg" alt="Cover {{ArtistName}}" class="cover">
-    <div class="artist-name-crop">
+    <div class="artist-crop">
     <img src="https://pub-cdn.apitemplate.io/2026/04/122baa29-70f7-436e-8a5e-2c83c2b226ce/Intro.jpeg" alt="{{ArtistName}}">
     </div>
 
