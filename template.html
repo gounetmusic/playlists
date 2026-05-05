@@ -4,41 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>{{ArtistName}} Selection - GounetMusic</title>
-    <meta name="description" content="Écoutez la sélection exclusive de {{ArtistName}} sur Spotify, YouTube, Deezer et Amazon Music.">
+    <title>{{72.`1`}}</title>
+    <meta name="description" content="{{72.`13`}}">
     
-    <meta property="og:title" content="{{ArtistName}} Selection - GounetMusic">
-    <meta property="og:description" content="Le meilleur de la musique sélectionné par {{ArtistName}}.">
-    <meta property="og:image" content="{{CoverURL}}">
+    <meta property="og:title" content="{{72.`1`}}">
+    <meta property="og:description" content="{{72.`13`}}">
+    <meta property="og:image" content="{{18.picture_xl}}">
     <meta property="og:type" content="music.playlist">
     <meta name="twitter:card" content="summary_large_image">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=TON_ID_GA"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'TON_ID_GA');
-    </script>
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MusicPlaylist",
-      "name": "Selection {{ArtistName}}",
+      "name": "{{72.`0`}}",
       "creator": {
         "@type": "Person",
         "name": "Gounet"
       },
-      "image": "{{CoverURL}}",
-      "description": "Lien vers les plateformes de streaming pour la sélection de {{ArtistName}}."
+      "image": "{{18.picture_xl}}",
+      "description": "Link to streaming platforms for the selection of {{72.`0`}}."
     }
     </script>
 
     <style>
         :root {
             --bg-overlay: rgba(15, 15, 15, 0.85);
-            --card: rgba(26, 26, 26, 0.9);
+            --card: rgb(0, 0, 0);
             --text: #ffffff;
             --subtext: #a0a0a0;
         }
@@ -55,19 +47,18 @@
             overflow-x: hidden;
         }
 
-        /* ----- L'effet de Fond Flouté ----- */
+        
         .background-blur {
-            position: fixed;   /* Reste fixe derrière le contenu qui défile */
+            position: fixed;
             top: 0; left: 0;
-            width: 100%; height: 100%;
-            /* Injecte l'image 1000x1000 ici */
-            background-image: url('https://cdn-images.dzcdn.net/images/cover/eddd8a5647dd76bd00cd620f0e69ffe1-f970e7ca583bc9b0cc2d663282c06b48-3b1a11e69d2e926810b0de27da8a9755-bc03050e859da9cb06ebae8c11f8a140/1000x1000-000000-80-0-0.jpg');
-            background-size: cover;          /* Couvre tout l'écran */
-            background-position: center;     /* Centre l'image */
-            filter: blur(20px);              /* Force du flou (ajuste si besoin) */
-            -webkit-filter: blur(20px);      /* Pour Safari */
-            transform: scale(1.1);           /* Grandit légèrement l'image pour cacher les bords nets du flou */
-            z-index: -2;                     /* Place tout derrière */
+            width: 100%; height: 100%;         
+            background-image: url('{{18.picture_xl}}');
+            background-size: cover;
+            background-position: center;
+            filter: blur(20px);
+            -webkit-filter: blur(20px);
+            transform: scale(1.1);
+            z-index: -2;
         }
 
         .background-overlay {
@@ -82,24 +73,39 @@
             width: 95%; 
             max-width: 400px; 
             text-align: center; 
-            padding: 20px 20px 40px 20px; /* Réduit le haut à 20px au lieu de 40px */
+            padding: 20px 20px 40px 20px;
             position: relative;
             z-index: 1;
-            margin-top: 5vh; /* Ajoute une petite marge flexible (5% de la hauteur de l'écran) */
+            margin-top: 5vh;
         }
 
         .cover { 
-            width: 50%;           /* Elle prend la moitié de la largeur du container */
-            max-width: 240px;     /* On met une limite pour qu'elle ne devienne pas géante sur iPad */
-            min-width: 150px;     /* On met une limite pour qu'elle ne soit pas minuscule sur petit téléphone */
-            aspect-ratio: 1 / 1;  /* Force le carré parfait */
+            width: 50%;          
+            max-width: 240px;   
+            min-width: 150px;
+            aspect-ratio: 1 / 1; 
             border-radius: 12px; 
             margin-bottom: 25px; 
             object-fit: cover;
             box-shadow: 0 10px 40px rgba(0,0,0,0.7);
         }
 
-        h1 { font-size: 1.6rem; margin-bottom: 35px; font-weight: 800; letter-spacing: -0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .artist-crop {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 20px auto;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            aspect-ratio: 4 / 1; 
+        }
+
+        .artist-crop img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            object-position: 50% 75%; 
+        }
 
         .link-card { 
             background: var(--card); 
@@ -144,30 +150,31 @@
 <body>
     <div class="background-blur"></div>
     <div class="background-overlay"></div>
-
     <div class="container">
-        <img src="https://cdn-images.dzcdn.net/images/cover/eddd8a5647dd76bd00cd620f0e69ffe1-f970e7ca583bc9b0cc2d663282c06b48-3b1a11e69d2e926810b0de27da8a9755-bc03050e859da9cb06ebae8c11f8a140/1000x1000-000000-80-0-0.jpg" alt="Cover {{ArtistName}}" class="cover">
-        <h1>{{ArtistName}}</h1>
+        <img src="{{18.picture_xl}}" alt="Cover {{72.`0`}}" class="cover">
+    <div class="artist-crop">
+    <img src="{{71.data.download_url}}" alt="{{72.`0`}}">
+    </div>
 
-        <a href="{{URL_Spotify}}" class="link-card">
+        <a href="https://open.spotify.com/playlist/{{72.`4`}}" class="link-card">
             <div class="platform-icon"><img src="https://cdn.simpleicons.org/spotify/1DB954" alt="Spotify"></div>
             <span class="platform-name">Spotify</span>
             <span class="btn-play">Play</span>
         </a>
 
-        <a href="{{URL_YouTube}}" class="link-card">
+        <a href="https://www.youtube.com/playlist?list={{72.`2`}}" class="link-card">
             <div class="platform-icon"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube"></div>
             <span class="platform-name">YouTube</span>
             <span class="btn-play">Play</span>
         </a>
 
-        <a href="{{URL_Deezer}}" class="link-card">
+        <a href="https://www.deezer.com/en/playlist/{{72.`3`}}" class="link-card">
             <div class="platform-icon"><img src="https://cdn.simpleicons.org/deezer/A238FF" alt="Deezer"></div>
             <span class="platform-name">Deezer</span>
             <span class="btn-play">Play</span>
         </a>
 
-        <a href="{{URL_Amazon}}" class="link-card">
+        <a href="https://music.amazon.fr/user-playlists/{{72.`5`}}" class="link-card">
             <div class="platform-icon amazon-icon-bg"><img src="https://cloudinary-cdn.ffm.to/s--Qpi3CZYi--/w_64,h_64,c_limit/f_png/https%3A%2F%2Fassets.ffm.to%2Fimages%2Flogo%2Fmusic-service_amazon_without_text_new_branding.png" alt="Amazon Music"></div>
             <span class="platform-name">Amazon Music</span>
             <span class="btn-play">Play</span>
