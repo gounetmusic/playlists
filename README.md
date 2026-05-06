@@ -62,12 +62,12 @@
 - [Deborah De Luca](https://gounetmusic.github.io/playlists/deborah-de-luca.html)
 - [Dish Dash](https://gounetmusic.github.io/playlists/dish-dash.html)
 - [Dixon](https://gounetmusic.github.io/playlists/dixon.html)
-- [Dj Boring](https://gounetmusic.github.io/playlists/dj-boring.html)
-- [Dj Marky](https://gounetmusic.github.io/playlists/dj-marky.html)
-- [Dj Pgz](https://gounetmusic.github.io/playlists/dj-pgz.html)
-- [Dj Seinfeld](https://gounetmusic.github.io/playlists/dj-seinfeld.html)
-- [Dj Sliink](https://gounetmusic.github.io/playlists/dj-sliink.html)
-- [Dj Waxfiend](https://gounetmusic.github.io/playlists/dj-waxfiend.html)
+- [DJ Boring](https://gounetmusic.github.io/playlists/dj-boring.html)
+- [DJ Marky](https://gounetmusic.github.io/playlists/dj-marky.html)
+- [DJ PGZ](https://gounetmusic.github.io/playlists/dj-pgz.html)
+- [DJ Seinfeld](https://gounetmusic.github.io/playlists/dj-seinfeld.html)
+- [DJ Sliink](https://gounetmusic.github.io/playlists/dj-sliink.html)
+- [DJ Waxfiend](https://gounetmusic.github.io/playlists/dj-waxfiend.html)
 - [Dom Dolla](https://gounetmusic.github.io/playlists/dom-dolla.html)
 - [Dope Caesar](https://gounetmusic.github.io/playlists/dope-caesar.html)
 - [Dwson](https://gounetmusic.github.io/playlists/dwson.html)
@@ -117,8 +117,8 @@
 ## J
 
 - [Jad Halal](https://gounetmusic.github.io/playlists/jad-halal.html)
-- [Jamesjamesjames](https://gounetmusic.github.io/playlists/jamesjamesjames.html)
-- [Jamie Xx](https://gounetmusic.github.io/playlists/jamie-xx.html)
+- [JamesJamesJames](https://gounetmusic.github.io/playlists/jamesjamesjames.html)
+- [Jamie XX](https://gounetmusic.github.io/playlists/jamie-xx.html)
 - [Jayda G](https://gounetmusic.github.io/playlists/jayda-g.html)
 - [Jennifer Cardini](https://gounetmusic.github.io/playlists/jennifer-cardini.html)
 - [Jeremy Olander](https://gounetmusic.github.io/playlists/jeremy-olander.html)
@@ -210,7 +210,7 @@
 - [Seth Troxler](https://gounetmusic.github.io/playlists/seth-troxler.html)
 - [Sherelle](https://gounetmusic.github.io/playlists/sherelle.html)
 - [Shkoon](https://gounetmusic.github.io/playlists/shkoon.html)
-- [Shyfx](https://gounetmusic.github.io/playlists/shyfx.html)
+- [ShyFX](https://gounetmusic.github.io/playlists/shyfx.html)
 - [Shygirl](https://gounetmusic.github.io/playlists/shygirl.html)
 - [Sinego](https://gounetmusic.github.io/playlists/sinego.html)
 - [Skeleten](https://gounetmusic.github.io/playlists/skeleten.html)
@@ -223,8 +223,8 @@
 - [Teed](https://gounetmusic.github.io/playlists/teed.html)
 - [Todd Terry](https://gounetmusic.github.io/playlists/todd-terry.html)
 - [Tripolism](https://gounetmusic.github.io/playlists/tripolism.html)
-- [Tsha](https://gounetmusic.github.io/playlists/tsha.html)
-- [Txc](https://gounetmusic.github.io/playlists/txc.html)
+- [TSHA](https://gounetmusic.github.io/playlists/tsha.html)
+- [TxC](https://gounetmusic.github.io/playlists/txc.html)
 
 [↑ Back to top](#playlists)
 
@@ -237,20 +237,20 @@
 ## V
 
 - [Victor Cardenas](https://gounetmusic.github.io/playlists/victor-cardenas.html)
-- [Vtss](https://gounetmusic.github.io/playlists/vtss.html)
+- [VTSS](https://gounetmusic.github.io/playlists/vtss.html)
 
 [↑ Back to top](#playlists)
 
 ## W
 
-- [Whomadewho](https://gounetmusic.github.io/playlists/whomadewho.html)
+- [WhoMadeWho](https://gounetmusic.github.io/playlists/whomadewho.html)
 
 [↑ Back to top](#playlists)
 
 ## Y
 
 - [Young Marco](https://gounetmusic.github.io/playlists/young-marco.html)
-- [Youngfranco](https://gounetmusic.github.io/playlists/youngfranco.html)
+- [YoungFranco](https://gounetmusic.github.io/playlists/youngfranco.html)
 - [Yu Su](https://gounetmusic.github.io/playlists/yu-su.html)
 
 [↑ Back to top](#playlists)
