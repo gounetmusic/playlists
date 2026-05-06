@@ -17,7 +17,7 @@
 - [Anetha](https://gounetmusic.github.io/playlists/anetha.html)
 - [Anfisa Letyago](https://gounetmusic.github.io/playlists/anfisa-letyago.html)
 - [Anja Schneider](https://gounetmusic.github.io/playlists/anja-schneider.html)
-- [Anotr](https://gounetmusic.github.io/playlists/anotr.html)
+- [ANOTR](https://gounetmusic.github.io/playlists/anotr.html)
 - [Anyma](https://gounetmusic.github.io/playlists/anyma.html)
 - [Axel Boman](https://gounetmusic.github.io/playlists/axel-boman.html)
 
@@ -25,11 +25,11 @@
 
 ## B
 
-- [Bambii](https://gounetmusic.github.io/playlists/bambii.html)
+- [BAMBII](https://gounetmusic.github.io/playlists/bambii.html)
 - [Barry Can'T Swim](https://gounetmusic.github.io/playlists/barry-can't-swim.html)
 - [Bedouin](https://gounetmusic.github.io/playlists/bedouin.html)
 - [Bella Boo](https://gounetmusic.github.io/playlists/bella-boo.html)
-- [Beskres](https://gounetmusic.github.io/playlists/beskres.html)
+- [BESKRES](https://gounetmusic.github.io/playlists/beskres.html)
 - [Black Coffee](https://gounetmusic.github.io/playlists/black-coffee.html)
 - [Bob Sinclar](https://gounetmusic.github.io/playlists/bob-sinclar.html)
 - [Boris Brejcha](https://gounetmusic.github.io/playlists/boris-brejcha.html)
@@ -42,10 +42,10 @@
 - [Califato ¾](https://gounetmusic.github.io/playlists/califato-¾.html)
 - [Carl Cox](https://gounetmusic.github.io/playlists/carl-cox.html)
 - [Catz 'N Dogz'](https://gounetmusic.github.io/playlists/catz-'n-dogz'.html)
-- [Ccdisco!](https://gounetmusic.github.io/playlists/ccdisco!.html)
-- [Chloe](https://gounetmusic.github.io/playlists/chloe.html)
+- [CCDISCO!](https://gounetmusic.github.io/playlists/ccdisco!.html)
+- [CHLOE](https://gounetmusic.github.io/playlists/chloe.html)
 - [Chloé Caillet](https://gounetmusic.github.io/playlists/chloé-caillet.html)
-- [Cobrah](https://gounetmusic.github.io/playlists/cobrah.html)
+- [COBRAH](https://gounetmusic.github.io/playlists/cobrah.html)
 - [Confidence Man](https://gounetmusic.github.io/playlists/confidence-man.html)
 - [Cosmicat](https://gounetmusic.github.io/playlists/cosmicat.html)
 
@@ -57,12 +57,12 @@
 - [Damian Lazarus](https://gounetmusic.github.io/playlists/damian-lazarus.html)
 - [Daphni](https://gounetmusic.github.io/playlists/daphni.html)
 - [Dawn Richard](https://gounetmusic.github.io/playlists/dawn-richard.html)
-- [Dbn Gogo](https://gounetmusic.github.io/playlists/dbn-gogo.html)
-- [Deas](https://gounetmusic.github.io/playlists/deas.html)
+- [DBN Gogo](https://gounetmusic.github.io/playlists/dbn-gogo.html)
+- [DEAS](https://gounetmusic.github.io/playlists/deas.html)
 - [Deborah De Luca](https://gounetmusic.github.io/playlists/deborah-de-luca.html)
 - [Dish Dash](https://gounetmusic.github.io/playlists/dish-dash.html)
 - [Dixon](https://gounetmusic.github.io/playlists/dixon.html)
-- [DJ Boring](https://gounetmusic.github.io/playlists/dj-boring.html)
+- [DJ BORING](https://gounetmusic.github.io/playlists/dj-boring.html)
 - [DJ Marky](https://gounetmusic.github.io/playlists/dj-marky.html)
 - [DJ PGZ](https://gounetmusic.github.io/playlists/dj-pgz.html)
 - [DJ Seinfeld](https://gounetmusic.github.io/playlists/dj-seinfeld.html)
@@ -117,8 +117,8 @@
 ## J
 
 - [Jad Halal](https://gounetmusic.github.io/playlists/jad-halal.html)
-- [JamesJamesJames](https://gounetmusic.github.io/playlists/jamesjamesjames.html)
-- [Jamie XX](https://gounetmusic.github.io/playlists/jamie-xx.html)
+- [jamesjamesjames](https://gounetmusic.github.io/playlists/jamesjamesjames.html)
+- [Jamie xx](https://gounetmusic.github.io/playlists/jamie-xx.html)
 - [Jayda G](https://gounetmusic.github.io/playlists/jayda-g.html)
 - [Jennifer Cardini](https://gounetmusic.github.io/playlists/jennifer-cardini.html)
 - [Jeremy Olander](https://gounetmusic.github.io/playlists/jeremy-olander.html)
@@ -159,7 +159,7 @@
 - [Modeselektor](https://gounetmusic.github.io/playlists/modeselektor.html)
 - [Monika Kruse](https://gounetmusic.github.io/playlists/monika-kruse.html)
 - [Monster](https://gounetmusic.github.io/playlists/monster.html)
-- [Moonshine](https://gounetmusic.github.io/playlists/moonshine.html)
+- [MOONSHINE](https://gounetmusic.github.io/playlists/moonshine.html)
 - [Mosimann](https://gounetmusic.github.io/playlists/mosimann.html)
 - [Mr. Id](https://gounetmusic.github.io/playlists/mr.-id.html)
 - [Myd](https://gounetmusic.github.io/playlists/myd.html)
@@ -200,15 +200,15 @@
 ## R
 
 - [Rochelle Jordan](https://gounetmusic.github.io/playlists/rochelle-jordan.html)
-- [Rona](https://gounetmusic.github.io/playlists/rona.html)
+- [RONA](https://gounetmusic.github.io/playlists/rona.html)
 
 [↑ Back to top](#playlists)
 
 ## S
 
-- [Safar](https://gounetmusic.github.io/playlists/safar.html)
+- [SAFAR](https://gounetmusic.github.io/playlists/safar.html)
 - [Seth Troxler](https://gounetmusic.github.io/playlists/seth-troxler.html)
-- [Sherelle](https://gounetmusic.github.io/playlists/sherelle.html)
+- [SHERELLE](https://gounetmusic.github.io/playlists/sherelle.html)
 - [Shkoon](https://gounetmusic.github.io/playlists/shkoon.html)
 - [ShyFX](https://gounetmusic.github.io/playlists/shyfx.html)
 - [Shygirl](https://gounetmusic.github.io/playlists/shygirl.html)
@@ -220,7 +220,7 @@
 
 ## T
 
-- [Teed](https://gounetmusic.github.io/playlists/teed.html)
+- [TEED](https://gounetmusic.github.io/playlists/teed.html)
 - [Todd Terry](https://gounetmusic.github.io/playlists/todd-terry.html)
 - [Tripolism](https://gounetmusic.github.io/playlists/tripolism.html)
 - [TSHA](https://gounetmusic.github.io/playlists/tsha.html)
@@ -258,6 +258,6 @@
 ## Z
 
 - [Zakes Bantwini](https://gounetmusic.github.io/playlists/zakes-bantwini.html)
-- [Zulan](https://gounetmusic.github.io/playlists/zulan.html)
+- [ZULAN](https://gounetmusic.github.io/playlists/zulan.html)
 
 [↑ Back to top](#playlists)
