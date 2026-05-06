@@ -6,6 +6,8 @@
 
 - [&Me](https://gounetmusic.github.io/playlists/&me.html)
 
+[↑ Haut de page](#playlists)
+
 ## A
 
 - [Aksamit](https://gounetmusic.github.io/playlists/aksamit.html)
@@ -19,6 +21,8 @@
 - [Anyma](https://gounetmusic.github.io/playlists/anyma.html)
 - [Axel Boman](https://gounetmusic.github.io/playlists/axel-boman.html)
 
+[↑ Haut de page](#playlists)
+
 ## B
 
 - [Bambii](https://gounetmusic.github.io/playlists/bambii.html)
@@ -31,6 +35,8 @@
 - [Boris Brejcha](https://gounetmusic.github.io/playlists/boris-brejcha.html)
 - [Boys Noize](https://gounetmusic.github.io/playlists/boys-noize.html)
 
+[↑ Haut de page](#playlists)
+
 ## C
 
 - [Califato ¾](https://gounetmusic.github.io/playlists/califato-¾.html)
@@ -42,6 +48,8 @@
 - [Cobrah](https://gounetmusic.github.io/playlists/cobrah.html)
 - [Confidence Man](https://gounetmusic.github.io/playlists/confidence-man.html)
 - [Cosmicat](https://gounetmusic.github.io/playlists/cosmicat.html)
+
+[↑ Haut de page](#playlists)
 
 ## D
 
@@ -64,12 +72,16 @@
 - [Dope Caesar](https://gounetmusic.github.io/playlists/dope-caesar.html)
 - [Dwson](https://gounetmusic.github.io/playlists/dwson.html)
 
+[↑ Haut de page](#playlists)
+
 ## E
 
 - [Ela Minus](https://gounetmusic.github.io/playlists/ela-minus.html)
 - [Eli Escobar](https://gounetmusic.github.io/playlists/eli-escobar.html)
 - [Eliza Rose](https://gounetmusic.github.io/playlists/eliza-rose.html)
 - [Ellen Allien](https://gounetmusic.github.io/playlists/ellen-allien.html)
+
+[↑ Haut de page](#playlists)
 
 ## F
 
@@ -78,6 +90,8 @@
 - [Foxall](https://gounetmusic.github.io/playlists/foxall.html)
 - [Francis Mercier](https://gounetmusic.github.io/playlists/francis-mercier.html)
 
+[↑ Haut de page](#playlists)
+
 ## G
 
 - [Gerd Janson](https://gounetmusic.github.io/playlists/gerd-janson.html)
@@ -85,14 +99,20 @@
 - [Green Velvet](https://gounetmusic.github.io/playlists/green-velvet.html)
 - [Gui Boratto](https://gounetmusic.github.io/playlists/gui-boratto.html)
 
+[↑ Haut de page](#playlists)
+
 ## H
 
 - [Honey Dijon](https://gounetmusic.github.io/playlists/honey-dijon.html)
+
+[↑ Haut de page](#playlists)
 
 ## I
 
 - [Imad](https://gounetmusic.github.io/playlists/imad.html)
 - [Indira Paganotto](https://gounetmusic.github.io/playlists/indira-paganotto.html)
+
+[↑ Haut de page](#playlists)
 
 ## J
 
@@ -105,6 +125,8 @@
 - [John Summit](https://gounetmusic.github.io/playlists/john-summit.html)
 - [Jullian Gomes](https://gounetmusic.github.io/playlists/jullian-gomes.html)
 
+[↑ Haut de page](#playlists)
+
 ## K
 
 - [Kabza De Small](https://gounetmusic.github.io/playlists/kabza-de-small.html)
@@ -115,11 +137,15 @@
 - [Kid Fonque](https://gounetmusic.github.io/playlists/kid-fonque.html)
 - [Kornel Kovacs](https://gounetmusic.github.io/playlists/kornel-kovacs.html)
 
+[↑ Haut de page](#playlists)
+
 ## L
 
 - [Laurent Garnier](https://gounetmusic.github.io/playlists/laurent-garnier.html)
 - [Logic1000](https://gounetmusic.github.io/playlists/logic1000.html)
 - [Lotic](https://gounetmusic.github.io/playlists/lotic.html)
+
+[↑ Haut de page](#playlists)
 
 ## M
 
@@ -138,16 +164,22 @@
 - [Mr. Id](https://gounetmusic.github.io/playlists/mr.-id.html)
 - [Myd](https://gounetmusic.github.io/playlists/myd.html)
 
+[↑ Haut de page](#playlists)
+
 ## N
 
 - [Nina Kraviz](https://gounetmusic.github.io/playlists/nina-kraviz.html)
 - [Nina Las Vegas](https://gounetmusic.github.io/playlists/nina-las-vegas.html)
 - [Nu Genea](https://gounetmusic.github.io/playlists/nu-genea.html)
 
+[↑ Haut de page](#playlists)
+
 ## O
 
 - [Oceanvs Orientalis](https://gounetmusic.github.io/playlists/oceanvs-orientalis.html)
 - [Or:La](https://gounetmusic.github.io/playlists/or:la.html)
+
+[↑ Haut de page](#playlists)
 
 ## P
 
@@ -156,15 +188,21 @@
 - [Populous](https://gounetmusic.github.io/playlists/populous.html)
 - [Pretty Girl](https://gounetmusic.github.io/playlists/pretty-girl.html)
 
+[↑ Haut de page](#playlists)
+
 ## Q
 
 - [Qrion](https://gounetmusic.github.io/playlists/qrion.html)
 - [Que Dj](https://gounetmusic.github.io/playlists/que-dj.html)
 
+[↑ Haut de page](#playlists)
+
 ## R
 
 - [Rochelle Jordan](https://gounetmusic.github.io/playlists/rochelle-jordan.html)
 - [Rona](https://gounetmusic.github.io/playlists/rona.html)
+
+[↑ Haut de page](#playlists)
 
 ## S
 
@@ -178,6 +216,8 @@
 - [Skeleten](https://gounetmusic.github.io/playlists/skeleten.html)
 - [Sofia Kourtesis](https://gounetmusic.github.io/playlists/sofia-kourtesis.html)
 
+[↑ Haut de page](#playlists)
+
 ## T
 
 - [Teed](https://gounetmusic.github.io/playlists/teed.html)
@@ -186,18 +226,26 @@
 - [Tsha](https://gounetmusic.github.io/playlists/tsha.html)
 - [Txc](https://gounetmusic.github.io/playlists/txc.html)
 
+[↑ Haut de page](#playlists)
+
 ## U
 
 - [Uncle Waffles](https://gounetmusic.github.io/playlists/uncle-waffles.html)
+
+[↑ Haut de page](#playlists)
 
 ## V
 
 - [Victor Cardenas](https://gounetmusic.github.io/playlists/victor-cardenas.html)
 - [Vtss](https://gounetmusic.github.io/playlists/vtss.html)
 
+[↑ Haut de page](#playlists)
+
 ## W
 
 - [Whomadewho](https://gounetmusic.github.io/playlists/whomadewho.html)
+
+[↑ Haut de page](#playlists)
 
 ## Y
 
@@ -205,7 +253,11 @@
 - [Youngfranco](https://gounetmusic.github.io/playlists/youngfranco.html)
 - [Yu Su](https://gounetmusic.github.io/playlists/yu-su.html)
 
+[↑ Haut de page](#playlists)
+
 ## Z
 
 - [Zakes Bantwini](https://gounetmusic.github.io/playlists/zakes-bantwini.html)
 - [Zulan](https://gounetmusic.github.io/playlists/zulan.html)
+
+[↑ Haut de page](#playlists)
