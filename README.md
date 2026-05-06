@@ -4,7 +4,7 @@
 
 ## Autres
 
-- [&Me](https://gounetmusic.github.io/playlists/&me.html)
+- [&ME](https://gounetmusic.github.io/playlists/&me.html)
 
 [↑ Back to top](#playlists)
 
