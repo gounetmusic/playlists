@@ -62,11 +62,10 @@
         }
 
         .background-mosaic {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
             z-index: -2;
             overflow: hidden;
             display: grid;
@@ -203,8 +202,6 @@
             gap: 14px;
             margin-bottom: 14px;
             scroll-margin-top: 60px;
-            position: relative;
-            z-index: 1;
         }
 
         .letter-heading h2 {
@@ -229,9 +226,6 @@
             transition: color 0.15s, opacity 0.15s;
             opacity: 0.9;
             font-weight: 600;
-            position: relative;
-            z-index: 2;
-            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
         }
 
             .back-top:hover {
@@ -844,8 +838,13 @@
             const mosaic = document.getElementById('background-mosaic');
             if (!mosaic || !covers.length) return;
 
+            const pageHeight = Math.max(
+                document.body.scrollHeight,
+                document.documentElement.scrollHeight,
+                window.innerHeight
+            );
             const cols = Math.ceil(window.innerWidth / TILE_SIZE) + 2;
-            const rows = Math.ceil(window.innerHeight / TILE_SIZE) + 2;
+            const rows = Math.ceil(pageHeight / TILE_SIZE) + 2;
             const tilesCount = cols * rows;
 
             if (mosaicState.observer) {
@@ -920,6 +919,14 @@
                     resizeTimeout = setTimeout(() => renderMosaic(covers), 180);
                 });
 
+                let scrollTimeout;
+                window.addEventListener('scroll', () => {
+                    if (scrollTimeout) return;
+                    scrollTimeout = setTimeout(() => {
+                        updateTilesOnScroll();
+                        scrollTimeout = null;
+                    }, 120);
+                }, { passive: true });
             } catch (error) {
                 console.error('Unable to build background mosaic:', error);
             }
