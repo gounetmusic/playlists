@@ -48,6 +48,7 @@
             color: var(--text);
             min-height: 100vh;
             overflow-x: hidden;
+            position: relative;
         }
 
         /* ── Background ── */
@@ -61,8 +62,10 @@
         }
 
         .background-mosaic {
-            position: fixed;
-            inset: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             z-index: -2;
             overflow: hidden;
             display: grid;
@@ -71,7 +74,6 @@
             justify-content: center;
             align-content: start;
             filter: saturate(0.9);
-            transform: scale(1.04);
             opacity: 0.35;
             pointer-events: none;
         }
@@ -81,6 +83,8 @@
             height: 100px;
             background-size: cover;
             background-position: center;
+            background-color: #111;
+            transition: opacity 0.3s ease;
         }
 
         /* ── Header ── */
@@ -771,6 +775,15 @@
         Crafted with <span role="img" aria-label="love">❤️</span> by Gounet · <a href="https://gounetmusic.github.io" style="color:inherit;text-decoration:none;">gounetmusic.github.io</a>
     </footer>
     <script>
+        const TILE_SIZE = 100;
+        let mosaicState = {
+            covers: [],
+            cols: 0,
+            rows: 0,
+            tiles: [],
+            observer: null
+        };
+
         async function loadArtistCoversFromSitemap() {
             const sitemapResponse = await fetch('sitemap.xml');
             const sitemapText = await sitemapResponse.text();
@@ -800,23 +813,88 @@
             return [...new Set(covers)];
         }
 
+        function getRandomCover() {
+            if (!mosaicState.covers.length) return '';
+            return mosaicState.covers[Math.floor(Math.random() * mosaicState.covers.length)];
+        }
+
+        function applyCover(tile) {
+            const cover = getRandomCover();
+            if (!cover) return;
+            tile.style.backgroundImage = `url("${cover}")`;
+        }
+
         function renderMosaic(covers) {
             const mosaic = document.getElementById('background-mosaic');
             if (!mosaic || !covers.length) return;
 
-            const cols = Math.ceil(window.innerWidth / 100) + 2;
-            const rows = Math.ceil(window.innerHeight / 100) + 2;
+            const pageHeight = Math.max(
+                document.body.scrollHeight,
+                document.documentElement.scrollHeight,
+                window.innerHeight
+            );
+            const cols = Math.ceil(window.innerWidth / TILE_SIZE) + 2;
+            const rows = Math.ceil(pageHeight / TILE_SIZE) + 2;
             const tilesCount = cols * rows;
 
+            if (mosaicState.observer) {
+                mosaicState.observer.disconnect();
+            }
+
             mosaic.innerHTML = '';
-            mosaic.style.gridTemplateColumns = `repeat(${cols}, 100px)`;
+            mosaic.style.gridTemplateColumns = `repeat(${cols}, ${TILE_SIZE}px)`;
+            mosaic.style.height = `${rows * TILE_SIZE}px`;
+
+            mosaicState = {
+                covers,
+                cols,
+                rows,
+                tiles: [],
+                observer: null
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                for (const entry of entries) {
+                    if (!entry.isIntersecting) continue;
+                    const tile = entry.target;
+                    if (!tile.style.backgroundImage) {
+                        applyCover(tile);
+                    }
+                }
+            }, { root: null, rootMargin: '250px' });
+            mosaicState.observer = observer;
 
             for (let i = 0; i < tilesCount; i++) {
                 const tile = document.createElement('div');
                 tile.className = 'mosaic-tile';
-                const cover = covers[Math.floor(Math.random() * covers.length)];
-                tile.style.backgroundImage = `url("${cover}")`;
+                const row = Math.floor(i / cols);
+                const col = i % cols;
+                tile.dataset.row = String(row);
+                tile.dataset.col = String(col);
                 mosaic.appendChild(tile);
+                mosaicState.tiles.push(tile);
+                observer.observe(tile);
+            }
+        }
+
+        function updateTilesOnScroll() {
+            if (!mosaicState.tiles.length) return;
+
+            const startRow = Math.max(0, Math.floor(window.scrollY / TILE_SIZE) - 1);
+            const endRow = Math.min(
+                mosaicState.rows - 1,
+                startRow + Math.ceil(window.innerHeight / TILE_SIZE) + 3
+            );
+
+            const swaps = Math.max(4, Math.floor(mosaicState.cols / 2));
+            for (let i = 0; i < swaps; i++) {
+                const row = startRow + Math.floor(Math.random() * (endRow - startRow + 1));
+                const col = Math.floor(Math.random() * mosaicState.cols);
+                const idx = (row * mosaicState.cols) + col;
+                const tile = mosaicState.tiles[idx];
+                if (tile) {
+                    applyCover(tile);
+                }
             }
         }
 
@@ -824,11 +902,21 @@
             try {
                 const covers = await loadArtistCoversFromSitemap();
                 renderMosaic(covers);
+
                 let resizeTimeout;
                 window.addEventListener('resize', () => {
                     clearTimeout(resizeTimeout);
                     resizeTimeout = setTimeout(() => renderMosaic(covers), 180);
                 });
+
+                let scrollTimeout;
+                window.addEventListener('scroll', () => {
+                    if (scrollTimeout) return;
+                    scrollTimeout = setTimeout(() => {
+                        updateTilesOnScroll();
+                        scrollTimeout = null;
+                    }, 120);
+                }, { passive: true });
             } catch (error) {
                 console.error('Unable to build background mosaic:', error);
             }
