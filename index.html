@@ -227,7 +227,12 @@
             opacity: 0.9;
             font-weight: 600;
         }
-        .back-top:hover { color: var(--accent2); opacity: 1; }
+
+            .back-top:hover {
+            text-shadow: -1px 0 var(--accent), 1px 0 var(--accent2);
+            animation: artist-glitch 300ms steps(2, end) 1;
+        }
+
 
         /* ── Artist grid ── */
         .artist-grid {
