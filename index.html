@@ -92,7 +92,6 @@
         header {
             position: relative;
             z-index: 10;
-            isolation: isolate;
             text-align: center;
             padding: 48px 20px 32px;
             border-bottom: 1px solid var(--border);
@@ -151,7 +150,6 @@
             position: sticky;
             top: 0;
             z-index: 20;
-            isolation: isolate;
             max-width: 840px;
             margin: 0 auto;
             background: rgba(15, 15, 15, 0.92);
@@ -189,7 +187,6 @@
         main {
             position: relative;
             z-index: 5;
-            isolation: isolate;
             max-width: 880px;
             margin: 0 auto;
             padding: 40px 20px 80px;
@@ -316,8 +313,7 @@
         /* ── Footer ── */
         footer {
             position: relative;
-            z-index: 5;
-            isolation: isolate;
+            z-index: 1;
             text-align: center;
             padding: 24px 20px;
             border-top: 1px solid var(--border);
@@ -326,25 +322,6 @@
             letter-spacing: 1px;
         }
 
-        /* ── Responsive ── */
-        @media (max-width: 480px) {
-            .letter-heading {
-                gap: 8px;
-            }
-
-            .letter-heading .divider {
-                min-width: 0;
-            }
-
-            .back-top {
-                font-size: 0.68rem;
-                letter-spacing: 0.6px;
-            }
-
-            .artist-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
     </style>
 </head>
 <body>
@@ -392,7 +369,6 @@
         <section class="letter-section" id="autres">
             <div class="letter-heading">
                 <h2>#</h2>
-                <div class="divider"></div>
                 <a href="#playlists" class="back-top">↑ top</a>
             </div>
             <div class="artist-grid">
