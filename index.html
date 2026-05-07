@@ -200,14 +200,11 @@
             margin-bottom: 40px;
         }
 
-        .letter-heading {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 14px;
-            scroll-margin-top: 60px;
-            position: relative;
-            z-index: 8;
+        .letter-heading .divider {
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+            min-width: 10px; /* Ajoute un minimum petit pour laisser de la place au reste */
         }
 
         .letter-heading h2 {
@@ -229,17 +226,16 @@
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: color 0.15s, opacity 0.15s;
-            opacity: 1;
             font-weight: 600;
             white-space: nowrap;
-            flex-shrink: 0;
+            flex-shrink: 0; /* <--- TRÈS IMPORTANT : empêche le bouton de s'écraser */
             padding: 4px 8px;
             border-radius: 8px;
             background: rgba(0, 0, 0, 0.88);
             border: 1px solid rgba(255, 255, 255, 0.12);
             position: relative;
             z-index: 9;
+            display: inline-block; /* Force l'affichage correct */
         }
 
         .back-top:hover {
@@ -327,13 +323,15 @@
         }
 
         /* ── Responsive ── */
-        @media (max-width: 480px) {
-            .letter-heading {
-                gap: 8px;
-            }
-
-            .letter-heading .divider {
-                min-width: 0;
+            @media (max-width: 480px) {
+                .letter-heading {
+                    gap: 5px; /* Réduit l'espace entre titre, ligne et bouton */
+                }
+                
+                .letter-heading h2 {
+                    font-size: 1.2rem; /* Réduit un peu le titre pour gagner de la place */
+                    min-width: auto;
+                }
             }
 
             .back-top {
