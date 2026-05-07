@@ -226,6 +226,29 @@
             font-size: 0.9rem;
             font-weight: 600;
             flex: 1;
+            position: relative;
+            transition: text-shadow 0.15s ease;
+        }
+
+        /* Glitch effect inspired by the page title */
+        .artist-card:hover .artist-card-name {
+            text-shadow: -1px 0 var(--accent), 1px 0 var(--accent2);
+            animation: artist-glitch 300ms steps(2, end) 1;
+        }
+
+        @keyframes artist-glitch {
+            0% {
+                text-shadow: 0 0 transparent;
+            }
+            25% {
+                text-shadow: -2px 0 var(--accent), 2px 0 var(--accent2);
+            }
+            50% {
+                text-shadow: 1px 0 var(--accent), -1px 0 var(--accent2);
+            }
+            100% {
+                text-shadow: -1px 0 var(--accent), 1px 0 var(--accent2);
+            }
         }
 
         .artist-card-arrow {
