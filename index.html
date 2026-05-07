@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="canonical" href="https://gounetmusic.github.io/playlists/index.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists | Immersive Echoes</title>
+    <meta name="description" content="Discover curated playlists for 130+ electronic music artists — from ambient to techno, house to afro. Find your sound on Spotify, YouTube, Deezer and Amazon Music.">
+    <meta property="og:title" content="Playlists | Immersive Echoes">
+    <meta property="og:description" content="Discover curated playlists for 130+ electronic music artists — from ambient to techno, house to afro. Find your sound on Spotify, YouTube, Deezer and Amazon Music.">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Playlists | Immersive Echoes",
+      "description": "Curated playlists for 130+ electronic music artists.",
+      "creator": {
+        "@type": "Person",
+        "name": "Gounet"
+      },
+      "url": "https://gounetmusic.github.io/playlists/index.html"
+    }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,100&display=swap');
+
+        :root {
+            --bg: #0f0f0f;
+            --card: rgb(0, 0, 0);
+            --card-hover: rgba(40, 40, 40, 0.95);
+            --text: #ffffff;
+            --subtext: #a0a0a0;
+            --accent: #ff0050;
+            --accent2: #00f2ea;
+            --border: rgba(255, 255, 255, 0.06);
+            --border-hover: rgba(255, 255, 255, 0.15);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── Background ── */
+        .background-overlay {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(255,0,80,0.04) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 20%, rgba(0,242,234,0.04) 0%, transparent 60%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ── Header ── */
+        header {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 48px 20px 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .site-title {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+            isolation: isolate;
+        }
+
+        .site-title::before {
+            content: attr(data-text);
+            position: absolute;
+            left: -2px; top: 0;
+            color: var(--accent);
+            z-index: -1;
+        }
+        .site-title::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 2px; top: 0;
+            color: var(--accent2);
+            z-index: -1;
+        }
+
+        .site-subtitle {
+            margin-top: 8px;
+            font-size: 1rem;
+            font-weight: 100;
+            font-style: oblique 10deg;
+            color: var(--subtext);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .count-badge {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 4px 14px;
+            background: var(--border);
+            border: 1px solid var(--border-hover);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--subtext);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ── Alphabet Nav ── */
+        .alpha-nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(15, 15, 15, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .alpha-nav a {
+            color: var(--subtext);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 7px;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            transition: all 0.15s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .alpha-nav a:hover {
+            color: var(--text);
+            border-color: var(--border-hover);
+            background: var(--card-hover);
+        }
+
+        /* ── Main layout ── */
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        /* ── Letter section ── */
+        .letter-section {
+            margin-bottom: 40px;
+        }
+
+        .letter-heading {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+            scroll-margin-top: 60px;
+        }
+
+        .letter-heading h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            min-width: 32px;
+        }
+
+        .letter-heading .divider {
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .back-top {
+            font-size: 0.65rem;
+            color: var(--subtext);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.15s;
+        }
+        .back-top:hover { color: var(--text); }
+
+        /* ── Artist grid ── */
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 10px;
+        }
+
+        .artist-card {
+            background: var(--card);
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text);
+            border: 1px solid var(--border);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .artist-card:hover {
+            background: var(--card-hover);
+            transform: translateY(-2px);
+            border-color: var(--border-hover);
+        }
+
+        .artist-card-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .artist-card-arrow {
+            font-size: 0.75rem;
+            color: var(--subtext);
+            transition: transform 0.15s, color 0.15s;
+        }
+
+        .artist-card:hover .artist-card-arrow {
+            transform: translateX(3px);
+            color: var(--text);
+        }
+
+        /* ── Footer ── */
+        footer {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 24px 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.75rem;
+            color: var(--subtext);
+            letter-spacing: 1px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 480px) {
+            .artist-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header id="playlists">
+        <div class="site-title" data-text="Playlists">Playlists</div>
+        <div class="site-subtitle">by Gounet · Immersive Echoes</div>
+        <div class="count-badge">130 artists</div>
+    </header>
+
+    <nav class="alpha-nav" aria-label="Alphabet navigation">
+        <a href="#autres">#</a>
+        <a href="#a">A</a>
+        <a href="#b">B</a>
+        <a href="#c">C</a>
+        <a href="#d">D</a>
+        <a href="#e">E</a>
+        <a href="#f">F</a>
+        <a href="#g">G</a>
+        <a href="#h">H</a>
+        <a href="#i">I</a>
+        <a href="#j">J</a>
+        <a href="#k">K</a>
+        <a href="#l">L</a>
+        <a href="#m">M</a>
+        <a href="#n">N</a>
+        <a href="#o">O</a>
+        <a href="#p">P</a>
+        <a href="#q">Q</a>
+        <a href="#r">R</a>
+        <a href="#s">S</a>
+        <a href="#t">T</a>
+        <a href="#u">U</a>
+        <a href="#v">V</a>
+        <a href="#w">W</a>
+        <a href="#y">Y</a>
+        <a href="#z">Z</a>
+    </nav>
+
+    <main>
+
+        <!-- # -->
+        <section class="letter-section" id="autres">
+            <div class="letter-heading">
+                <h2>#</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="&me.html" class="artist-card">
+                    <span class="artist-card-name">&Me</span>
+                    <span class="artist-card-arrow">›</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- A -->
+        <section class="letter-section" id="a">
+            <div class="letter-heading">
+                <h2>A</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="aksamit.html" class="artist-card"><span class="artist-card-name">Aksamit</span><span class="artist-card-arrow">›</span></a>
+                <a href="alunageorge.html" class="artist-card"><span class="artist-card-name">Alunageorge</span><span class="artist-card-arrow">›</span></a>
+                <a href="amelie-lens.html" class="artist-card"><span class="artist-card-name">Amelie Lens</span><span class="artist-card-arrow">›</span></a>
+                <a href="amine-k.html" class="artist-card"><span class="artist-card-name">Amine K</span><span class="artist-card-arrow">›</span></a>
+                <a href="anetha.html" class="artist-card"><span class="artist-card-name">Anetha</span><span class="artist-card-arrow">›</span></a>
+                <a href="anfisa-letyago.html" class="artist-card"><span class="artist-card-name">Anfisa Letyago</span><span class="artist-card-arrow">›</span></a>
+                <a href="anja-schneider.html" class="artist-card"><span class="artist-card-name">Anja Schneider</span><span class="artist-card-arrow">›</span></a>
+                <a href="anotr.html" class="artist-card"><span class="artist-card-name">Anotr</span><span class="artist-card-arrow">›</span></a>
+                <a href="anyma.html" class="artist-card"><span class="artist-card-name">Anyma</span><span class="artist-card-arrow">›</span></a>
+                <a href="axel-boman.html" class="artist-card"><span class="artist-card-name">Axel Boman</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- B -->
+        <section class="letter-section" id="b">
+            <div class="letter-heading">
+                <h2>B</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="bambii.html" class="artist-card"><span class="artist-card-name">Bambii</span><span class="artist-card-arrow">›</span></a>
+                <a href="barry-can't-swim.html" class="artist-card"><span class="artist-card-name">Barry Can't Swim</span><span class="artist-card-arrow">›</span></a>
+                <a href="bedouin.html" class="artist-card"><span class="artist-card-name">Bedouin</span><span class="artist-card-arrow">›</span></a>
+                <a href="bella-boo.html" class="artist-card"><span class="artist-card-name">Bella Boo</span><span class="artist-card-arrow">›</span></a>
+                <a href="beskres.html" class="artist-card"><span class="artist-card-name">Beskres</span><span class="artist-card-arrow">›</span></a>
+                <a href="black-coffee.html" class="artist-card"><span class="artist-card-name">Black Coffee</span><span class="artist-card-arrow">›</span></a>
+                <a href="bob-sinclar.html" class="artist-card"><span class="artist-card-name">Bob Sinclar</span><span class="artist-card-arrow">›</span></a>
+                <a href="boris-brejcha.html" class="artist-card"><span class="artist-card-name">Boris Brejcha</span><span class="artist-card-arrow">›</span></a>
+                <a href="boys-noize.html" class="artist-card"><span class="artist-card-name">Boys Noize</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- C -->
+        <section class="letter-section" id="c">
+            <div class="letter-heading">
+                <h2>C</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="califato-¾.html" class="artist-card"><span class="artist-card-name">Califato ¾</span><span class="artist-card-arrow">›</span></a>
+                <a href="carl-cox.html" class="artist-card"><span class="artist-card-name">Carl Cox</span><span class="artist-card-arrow">›</span></a>
+                <a href="catz-'n-dogz'.html" class="artist-card"><span class="artist-card-name">Catz 'N Dogz'</span><span class="artist-card-arrow">›</span></a>
+                <a href="ccdisco!.html" class="artist-card"><span class="artist-card-name">Ccdisco!</span><span class="artist-card-arrow">›</span></a>
+                <a href="chloe.html" class="artist-card"><span class="artist-card-name">Chloe</span><span class="artist-card-arrow">›</span></a>
+                <a href="chloé-caillet.html" class="artist-card"><span class="artist-card-name">Chloé Caillet</span><span class="artist-card-arrow">›</span></a>
+                <a href="cobrah.html" class="artist-card"><span class="artist-card-name">Cobrah</span><span class="artist-card-arrow">›</span></a>
+                <a href="confidence-man.html" class="artist-card"><span class="artist-card-name">Confidence Man</span><span class="artist-card-arrow">›</span></a>
+                <a href="cosmicat.html" class="artist-card"><span class="artist-card-name">Cosmicat</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- D -->
+        <section class="letter-section" id="d">
+            <div class="letter-heading">
+                <h2>D</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="dameeeela.html" class="artist-card"><span class="artist-card-name">Dameeeela</span><span class="artist-card-arrow">›</span></a>
+                <a href="damian-lazarus.html" class="artist-card"><span class="artist-card-name">Damian Lazarus</span><span class="artist-card-arrow">›</span></a>
+                <a href="daphni.html" class="artist-card"><span class="artist-card-name">Daphni</span><span class="artist-card-arrow">›</span></a>
+                <a href="dawn-richard.html" class="artist-card"><span class="artist-card-name">Dawn Richard</span><span class="artist-card-arrow">›</span></a>
+                <a href="dbn-gogo.html" class="artist-card"><span class="artist-card-name">Dbn Gogo</span><span class="artist-card-arrow">›</span></a>
+                <a href="deas.html" class="artist-card"><span class="artist-card-name">Deas</span><span class="artist-card-arrow">›</span></a>
+                <a href="deborah-de-luca.html" class="artist-card"><span class="artist-card-name">Deborah De Luca</span><span class="artist-card-arrow">›</span></a>
+                <a href="dish-dash.html" class="artist-card"><span class="artist-card-name">Dish Dash</span><span class="artist-card-arrow">›</span></a>
+                <a href="dixon.html" class="artist-card"><span class="artist-card-name">Dixon</span><span class="artist-card-arrow">›</span></a>
+                <a href="dj-boring.html" class="artist-card"><span class="artist-card-name">DJ Boring</span><span class="artist-card-arrow">›</span></a>
+                <a href="dj-marky.html" class="artist-card"><span class="artist-card-name">DJ Marky</span><span class="artist-card-arrow">›</span></a>
+                <a href="dj-pgz.html" class="artist-card"><span class="artist-card-name">DJ Pgz</span><span class="artist-card-arrow">›</span></a>
+                <a href="dj-seinfeld.html" class="artist-card"><span class="artist-card-name">DJ Seinfeld</span><span class="artist-card-arrow">›</span></a>
+                <a href="dj-sliink.html" class="artist-card"><span class="artist-card-name">DJ Sliink</span><span class="artist-card-arrow">›</span></a>
+                <a href="dj-waxfiend.html" class="artist-card"><span class="artist-card-name">DJ Waxfiend</span><span class="artist-card-arrow">›</span></a>
+                <a href="dom-dolla.html" class="artist-card"><span class="artist-card-name">Dom Dolla</span><span class="artist-card-arrow">›</span></a>
+                <a href="dope-caesar.html" class="artist-card"><span class="artist-card-name">Dope Caesar</span><span class="artist-card-arrow">›</span></a>
+                <a href="dwson.html" class="artist-card"><span class="artist-card-name">Dwson</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- E -->
+        <section class="letter-section" id="e">
+            <div class="letter-heading">
+                <h2>E</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="ela-minus.html" class="artist-card"><span class="artist-card-name">Ela Minus</span><span class="artist-card-arrow">›</span></a>
+                <a href="eli-escobar.html" class="artist-card"><span class="artist-card-name">Eli Escobar</span><span class="artist-card-arrow">›</span></a>
+                <a href="eliza-rose.html" class="artist-card"><span class="artist-card-name">Eliza Rose</span><span class="artist-card-arrow">›</span></a>
+                <a href="ellen-allien.html" class="artist-card"><span class="artist-card-name">Ellen Allien</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- F -->
+        <section class="letter-section" id="f">
+            <div class="letter-heading">
+                <h2>F</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="fatima-hajji.html" class="artist-card"><span class="artist-card-name">Fatima Hajji</span><span class="artist-card-arrow">›</span></a>
+                <a href="flume.html" class="artist-card"><span class="artist-card-name">Flume</span><span class="artist-card-arrow">›</span></a>
+                <a href="foxall.html" class="artist-card"><span class="artist-card-name">Foxall</span><span class="artist-card-arrow">›</span></a>
+                <a href="francis-mercier.html" class="artist-card"><span class="artist-card-name">Francis Mercier</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- G -->
+        <section class="letter-section" id="g">
+            <div class="letter-heading">
+                <h2>G</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="gerd-janson.html" class="artist-card"><span class="artist-card-name">Gerd Janson</span><span class="artist-card-arrow">›</span></a>
+                <a href="giorgia-angiuli.html" class="artist-card"><span class="artist-card-name">Giorgia Angiuli</span><span class="artist-card-arrow">›</span></a>
+                <a href="green-velvet.html" class="artist-card"><span class="artist-card-name">Green Velvet</span><span class="artist-card-arrow">›</span></a>
+                <a href="gui-boratto.html" class="artist-card"><span class="artist-card-name">Gui Boratto</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- H -->
+        <section class="letter-section" id="h">
+            <div class="letter-heading">
+                <h2>H</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="honey-dijon.html" class="artist-card"><span class="artist-card-name">Honey Dijon</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- I -->
+        <section class="letter-section" id="i">
+            <div class="letter-heading">
+                <h2>I</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="imad.html" class="artist-card"><span class="artist-card-name">Imad</span><span class="artist-card-arrow">›</span></a>
+                <a href="indira-paganotto.html" class="artist-card"><span class="artist-card-name">Indira Paganotto</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- J -->
+        <section class="letter-section" id="j">
+            <div class="letter-heading">
+                <h2>J</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="jad-halal.html" class="artist-card"><span class="artist-card-name">Jad Halal</span><span class="artist-card-arrow">›</span></a>
+                <a href="jamesjamesjames.html" class="artist-card"><span class="artist-card-name">Jamesjamesjames</span><span class="artist-card-arrow">›</span></a>
+                <a href="jamie-xx.html" class="artist-card"><span class="artist-card-name">Jamie XX</span><span class="artist-card-arrow">›</span></a>
+                <a href="jayda-g.html" class="artist-card"><span class="artist-card-name">Jayda G</span><span class="artist-card-arrow">›</span></a>
+                <a href="jennifer-cardini.html" class="artist-card"><span class="artist-card-name">Jennifer Cardini</span><span class="artist-card-arrow">›</span></a>
+                <a href="jeremy-olander.html" class="artist-card"><span class="artist-card-name">Jeremy Olander</span><span class="artist-card-arrow">›</span></a>
+                <a href="john-summit.html" class="artist-card"><span class="artist-card-name">John Summit</span><span class="artist-card-arrow">›</span></a>
+                <a href="jullian-gomes.html" class="artist-card"><span class="artist-card-name">Jullian Gomes</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- K -->
+        <section class="letter-section" id="k">
+            <div class="letter-heading">
+                <h2>K</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="kabza-de-small.html" class="artist-card"><span class="artist-card-name">Kabza De Small</span><span class="artist-card-arrow">›</span></a>
+                <a href="kamma-&-masalo.html" class="artist-card"><span class="artist-card-name">Kamma & Masalo</span><span class="artist-card-arrow">›</span></a>
+                <a href="kelly-lee-owens.html" class="artist-card"><span class="artist-card-name">Kelly Lee Owens</span><span class="artist-card-arrow">›</span></a>
+                <a href="ken-ishii.html" class="artist-card"><span class="artist-card-name">Ken Ishii</span><span class="artist-card-arrow">›</span></a>
+                <a href="kevin-saunderson.html" class="artist-card"><span class="artist-card-name">Kevin Saunderson</span><span class="artist-card-arrow">›</span></a>
+                <a href="kid-fonque.html" class="artist-card"><span class="artist-card-name">Kid Fonque</span><span class="artist-card-arrow">›</span></a>
+                <a href="kornel-kovacs.html" class="artist-card"><span class="artist-card-name">Kornel Kovacs</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- L -->
+        <section class="letter-section" id="l">
+            <div class="letter-heading">
+                <h2>L</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="laurent-garnier.html" class="artist-card"><span class="artist-card-name">Laurent Garnier</span><span class="artist-card-arrow">›</span></a>
+                <a href="logic1000.html" class="artist-card"><span class="artist-card-name">Logic1000</span><span class="artist-card-arrow">›</span></a>
+                <a href="lotic.html" class="artist-card"><span class="artist-card-name">Lotic</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- M -->
+        <section class="letter-section" id="m">
+            <div class="letter-heading">
+                <h2>M</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="maceo-plex.html" class="artist-card"><span class="artist-card-name">Maceo Plex</span><span class="artist-card-arrow">›</span></a>
+                <a href="marcel-dettmann.html" class="artist-card"><span class="artist-card-name">Marcel Dettmann</span><span class="artist-card-arrow">›</span></a>
+                <a href="maya-jane-coles.html" class="artist-card"><span class="artist-card-name">Maya Jane Coles</span><span class="artist-card-arrow">›</span></a>
+                <a href="mehmet-aslan.html" class="artist-card"><span class="artist-card-name">Mehmet Aslan</span><span class="artist-card-arrow">›</span></a>
+                <a href="michael-bibi.html" class="artist-card"><span class="artist-card-name">Michael Bibi</span><span class="artist-card-arrow">›</span></a>
+                <a href="miss-kittin.html" class="artist-card"><span class="artist-card-name">Miss Kittin</span><span class="artist-card-arrow">›</span></a>
+                <a href="mk.html" class="artist-card"><span class="artist-card-name">MK</span><span class="artist-card-arrow">›</span></a>
+                <a href="modeselektor.html" class="artist-card"><span class="artist-card-name">Modeselektor</span><span class="artist-card-arrow">›</span></a>
+                <a href="monika-kruse.html" class="artist-card"><span class="artist-card-name">Monika Kruse</span><span class="artist-card-arrow">›</span></a>
+                <a href="monster.html" class="artist-card"><span class="artist-card-name">Monster</span><span class="artist-card-arrow">›</span></a>
+                <a href="moonshine.html" class="artist-card"><span class="artist-card-name">Moonshine</span><span class="artist-card-arrow">›</span></a>
+                <a href="mosimann.html" class="artist-card"><span class="artist-card-name">Mosimann</span><span class="artist-card-arrow">›</span></a>
+                <a href="mr.-id.html" class="artist-card"><span class="artist-card-name">Mr. ID</span><span class="artist-card-arrow">›</span></a>
+                <a href="myd.html" class="artist-card"><span class="artist-card-name">Myd</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- N -->
+        <section class="letter-section" id="n">
+            <div class="letter-heading">
+                <h2>N</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="nina-kraviz.html" class="artist-card"><span class="artist-card-name">Nina Kraviz</span><span class="artist-card-arrow">›</span></a>
+                <a href="nina-las-vegas.html" class="artist-card"><span class="artist-card-name">Nina Las Vegas</span><span class="artist-card-arrow">›</span></a>
+                <a href="nu-genea.html" class="artist-card"><span class="artist-card-name">Nu Genea</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- O -->
+        <section class="letter-section" id="o">
+            <div class="letter-heading">
+                <h2>O</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="oceanvs-orientalis.html" class="artist-card"><span class="artist-card-name">Oceanvs Orientalis</span><span class="artist-card-arrow">›</span></a>
+                <a href="or:la.html" class="artist-card"><span class="artist-card-name">Or:la</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- P -->
+        <section class="letter-section" id="p">
+            <div class="letter-heading">
+                <h2>P</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="pan.html" class="artist-card"><span class="artist-card-name">Pan</span><span class="artist-card-arrow">›</span></a>
+                <a href="pauza.html" class="artist-card"><span class="artist-card-name">Pauza</span><span class="artist-card-arrow">›</span></a>
+                <a href="populous.html" class="artist-card"><span class="artist-card-name">Populous</span><span class="artist-card-arrow">›</span></a>
+                <a href="pretty-girl.html" class="artist-card"><span class="artist-card-name">Pretty Girl</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- Q -->
+        <section class="letter-section" id="q">
+            <div class="letter-heading">
+                <h2>Q</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="qrion.html" class="artist-card"><span class="artist-card-name">Qrion</span><span class="artist-card-arrow">›</span></a>
+                <a href="que-dj.html" class="artist-card"><span class="artist-card-name">Que DJ</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- R -->
+        <section class="letter-section" id="r">
+            <div class="letter-heading">
+                <h2>R</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="rochelle-jordan.html" class="artist-card"><span class="artist-card-name">Rochelle Jordan</span><span class="artist-card-arrow">›</span></a>
+                <a href="rona.html" class="artist-card"><span class="artist-card-name">Rona</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- S -->
+        <section class="letter-section" id="s">
+            <div class="letter-heading">
+                <h2>S</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="safar.html" class="artist-card"><span class="artist-card-name">Safar</span><span class="artist-card-arrow">›</span></a>
+                <a href="seth-troxler.html" class="artist-card"><span class="artist-card-name">Seth Troxler</span><span class="artist-card-arrow">›</span></a>
+                <a href="sherelle.html" class="artist-card"><span class="artist-card-name">Sherelle</span><span class="artist-card-arrow">›</span></a>
+                <a href="shkoon.html" class="artist-card"><span class="artist-card-name">Shkoon</span><span class="artist-card-arrow">›</span></a>
+                <a href="shyfx.html" class="artist-card"><span class="artist-card-name">ShyFX</span><span class="artist-card-arrow">›</span></a>
+                <a href="shygirl.html" class="artist-card"><span class="artist-card-name">Shygirl</span><span class="artist-card-arrow">›</span></a>
+                <a href="sinego.html" class="artist-card"><span class="artist-card-name">Sinego</span><span class="artist-card-arrow">›</span></a>
+                <a href="skeleten.html" class="artist-card"><span class="artist-card-name">Skeleten</span><span class="artist-card-arrow">›</span></a>
+                <a href="sofia-kourtesis.html" class="artist-card"><span class="artist-card-name">Sofia Kourtesis</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- T -->
+        <section class="letter-section" id="t">
+            <div class="letter-heading">
+                <h2>T</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="teed.html" class="artist-card"><span class="artist-card-name">Teed</span><span class="artist-card-arrow">›</span></a>
+                <a href="todd-terry.html" class="artist-card"><span class="artist-card-name">Todd Terry</span><span class="artist-card-arrow">›</span></a>
+                <a href="tripolism.html" class="artist-card"><span class="artist-card-name">Tripolism</span><span class="artist-card-arrow">›</span></a>
+                <a href="tsha.html" class="artist-card"><span class="artist-card-name">Tsha</span><span class="artist-card-arrow">›</span></a>
+                <a href="txc.html" class="artist-card"><span class="artist-card-name">TXC</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- U -->
+        <section class="letter-section" id="u">
+            <div class="letter-heading">
+                <h2>U</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="uncle-waffles.html" class="artist-card"><span class="artist-card-name">Uncle Waffles</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- V -->
+        <section class="letter-section" id="v">
+            <div class="letter-heading">
+                <h2>V</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="victor-cardenas.html" class="artist-card"><span class="artist-card-name">Victor Cardenas</span><span class="artist-card-arrow">›</span></a>
+                <a href="vtss.html" class="artist-card"><span class="artist-card-name">VTSS</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- W -->
+        <section class="letter-section" id="w">
+            <div class="letter-heading">
+                <h2>W</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="whomadewho.html" class="artist-card"><span class="artist-card-name">WhoMadeWho</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- Y -->
+        <section class="letter-section" id="y">
+            <div class="letter-heading">
+                <h2>Y</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="young-marco.html" class="artist-card"><span class="artist-card-name">Young Marco</span><span class="artist-card-arrow">›</span></a>
+                <a href="youngfranco.html" class="artist-card"><span class="artist-card-name">Youngfranco</span><span class="artist-card-arrow">›</span></a>
+                <a href="yu-su.html" class="artist-card"><span class="artist-card-name">Yu Su</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+        <!-- Z -->
+        <section class="letter-section" id="z">
+            <div class="letter-heading">
+                <h2>Z</h2>
+                <div class="divider"></div>
+                <a href="#playlists" class="back-top">↑ top</a>
+            </div>
+            <div class="artist-grid">
+                <a href="zakes-bantwini.html" class="artist-card"><span class="artist-card-name">Zakes Bantwini</span><span class="artist-card-arrow">›</span></a>
+                <a href="zulan.html" class="artist-card"><span class="artist-card-name">Zulan</span><span class="artist-card-arrow">›</span></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        Immersive Echoes · Gounet · <a href="https://gounetmusic.github.io" style="color:inherit;text-decoration:none;">gounetmusic.github.io</a>
+    </footer>
+</body>
+</html>
