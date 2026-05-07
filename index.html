@@ -96,6 +96,15 @@
             border-bottom: 1px solid var(--border);
         }
 
+        .header-card {
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 22px 24px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
         .site-title {
             font-size: clamp(2rem, 6vw, 3.5rem);
             font-weight: 700;
@@ -324,9 +333,11 @@
     <div class="background-overlay"></div>
 
     <header id="playlists">
-        <div class="site-title" data-text="Playlists">Playlists</div>
-        <div class="site-subtitle">Curated Music for Hours of Listening</div>
-        <div class="count-badge">130 artists</div>
+        <div class="header-card">
+            <div class="site-title" data-text="Playlists">Playlists</div>
+            <div class="site-subtitle">Curated Music for Hours of Listening</div>
+            <div class="count-badge">130 artists</div>
+        </div>
     </header>
 
     <nav class="alpha-nav" aria-label="Alphabet navigation">
