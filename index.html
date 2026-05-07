@@ -207,6 +207,27 @@
             font-weight: 700;
             color: var(--text);
             min-width: 32px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 12px;
+            border-radius: 10px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            line-height: 1;
+        }
+
+        .letter-heading h2::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -8px;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 3px;
+            border-radius: 999px;
+            background: var(--border-hover);
         }
 
         .letter-heading .divider {
