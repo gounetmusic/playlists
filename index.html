@@ -218,14 +218,16 @@
         }
 
         .back-top {
-            font-size: 0.65rem;
-            color: var(--subtext);
+            font-size: 0.75rem;
+            color: var(--text);
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: color 0.15s;
+            transition: color 0.15s, opacity 0.15s;
+            opacity: 0.9;
+            font-weight: 600;
         }
-        .back-top:hover { color: var(--text); }
+        .back-top:hover { color: var(--accent2); opacity: 1; }
 
         /* ── Artist grid ── */
         .artist-grid {
