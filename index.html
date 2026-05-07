@@ -49,7 +49,6 @@
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
-            isolation: isolate;
         }
 
         /* ── Background ── */
@@ -58,7 +57,7 @@
             inset: 0;
             background: radial-gradient(ellipse at 20% 50%, rgba(255,0,80,0.04) 0%, transparent 60%),
                         radial-gradient(ellipse at 80% 20%, rgba(0,242,234,0.04) 0%, transparent 60%);
-            z-index: 1;
+            z-index: -1;
             pointer-events: none;
         }
 
@@ -67,7 +66,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 0;
+            z-index: -2;
             overflow: hidden;
             display: grid;
             grid-template-columns: repeat(auto-fill, 100px);
@@ -186,7 +185,7 @@
         /* ── Main layout ── */
         main {
             position: relative;
-            z-index: 5;
+            z-index: 1;
             max-width: 880px;
             margin: 0 auto;
             padding: 40px 20px 80px;
@@ -197,11 +196,12 @@
             margin-bottom: 40px;
         }
 
-        .letter-heading .divider {
-            flex: 1;
-            height: 1px;
-            background: var(--border);
-            min-width: 10px; /* Ajoute un minimum petit pour laisser de la place au reste */
+        .letter-heading {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+            scroll-margin-top: 60px;
         }
 
         .letter-heading h2 {
@@ -223,19 +223,12 @@
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: color 0.15s, opacity 0.15s;
+            opacity: 0.9;
             font-weight: 600;
-            white-space: nowrap;
-            flex-shrink: 0; /* <--- TRÈS IMPORTANT : empêche le bouton de s'écraser */
-            padding: 4px 8px;
-            border-radius: 8px;
-            background: rgba(0, 0, 0, 0.88);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            position: relative;
-            z-index: 9;
-            display: inline-block; /* Force l'affichage correct */
         }
 
-        .back-top:hover {
+            .back-top:hover {
             text-shadow: -1px 0 var(--accent), 1px 0 var(--accent2);
             animation: artist-glitch 300ms steps(2, end) 1;
         }
@@ -320,19 +313,6 @@
 
         /* ── Responsive ── */
         @media (max-width: 480px) {
-            .letter-heading {
-                gap: 8px;
-            }
-
-            .letter-heading .divider {
-                min-width: 0;
-            }
-
-            .back-top {
-                font-size: 0.68rem;
-                letter-spacing: 0.6px;
-            }
-
             .artist-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -384,6 +364,7 @@
         <section class="letter-section" id="autres">
             <div class="letter-heading">
                 <h2>#</h2>
+                <div class="divider"></div>
                 <a href="#playlists" class="back-top">↑ top</a>
             </div>
             <div class="artist-grid">
