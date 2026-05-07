@@ -87,22 +87,31 @@
             transition: opacity 0.3s ease;
         }
 
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            max-width: 840px;
+            margin: 0 auto;
+            background: rgba(15, 15, 15, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
         /* ── Header ── */
         header {
             position: relative;
-            z-index: 10;
+            z-index: 1;
             text-align: center;
-            padding: 48px 20px 32px;
-            border-bottom: 1px solid var(--border);
+            padding: 24px 20px 10px;
         }
 
         .header-card {
             max-width: 840px;
             margin: 0 auto;
-            padding: 22px 24px;
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
         }
 
         .site-title {
@@ -144,16 +153,7 @@
 
         /* ── Alphabet Nav ── */
         .alpha-nav {
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            max-width: 840px;
-            margin: 0 auto;
-            background: rgba(15, 15, 15, 0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 12px;
-            border-bottom: 1px solid var(--border);
+            position: relative;
             padding: 10px 16px;
             display: flex;
             flex-wrap: wrap;
@@ -353,41 +353,43 @@
     <div class="background-mosaic" id="background-mosaic" aria-hidden="true"></div>
     <div class="background-overlay"></div>
 
-    <header id="playlists">
-        <div class="header-card">
-            <div class="site-title" data-text="Playlists">Playlists</div>
-            <div class="site-subtitle">Curated Music for Hours of Listening</div>
-        </div>
-    </header>
+    <div class="top-nav">
+        <header id="playlists">
+            <div class="header-card">
+                <div class="site-title" data-text="Playlists">Playlists</div>
+                <div class="site-subtitle">Curated Music for Hours of Listening</div>
+            </div>
+        </header>
 
-    <nav class="alpha-nav" aria-label="Alphabet navigation">
-        <a href="#autres">#</a>
-        <a href="#a">A</a>
-        <a href="#b">B</a>
-        <a href="#c">C</a>
-        <a href="#d">D</a>
-        <a href="#e">E</a>
-        <a href="#f">F</a>
-        <a href="#g">G</a>
-        <a href="#h">H</a>
-        <a href="#i">I</a>
-        <a href="#j">J</a>
-        <a href="#k">K</a>
-        <a href="#l">L</a>
-        <a href="#m">M</a>
-        <a href="#n">N</a>
-        <a href="#o">O</a>
-        <a href="#p">P</a>
-        <a href="#q">Q</a>
-        <a href="#r">R</a>
-        <a href="#s">S</a>
-        <a href="#t">T</a>
-        <a href="#u">U</a>
-        <a href="#v">V</a>
-        <a href="#w">W</a>
-        <a href="#y">Y</a>
-        <a href="#z">Z</a>
-    </nav>
+        <nav class="alpha-nav" aria-label="Alphabet navigation">
+            <a href="#autres">#</a>
+            <a href="#a">A</a>
+            <a href="#b">B</a>
+            <a href="#c">C</a>
+            <a href="#d">D</a>
+            <a href="#e">E</a>
+            <a href="#f">F</a>
+            <a href="#g">G</a>
+            <a href="#h">H</a>
+            <a href="#i">I</a>
+            <a href="#j">J</a>
+            <a href="#k">K</a>
+            <a href="#l">L</a>
+            <a href="#m">M</a>
+            <a href="#n">N</a>
+            <a href="#o">O</a>
+            <a href="#p">P</a>
+            <a href="#q">Q</a>
+            <a href="#r">R</a>
+            <a href="#s">S</a>
+            <a href="#t">T</a>
+            <a href="#u">U</a>
+            <a href="#v">V</a>
+            <a href="#w">W</a>
+            <a href="#y">Y</a>
+            <a href="#z">Z</a>
+        </nav>
+    </div>
 
     <main>
 
