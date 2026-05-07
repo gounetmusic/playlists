@@ -92,6 +92,7 @@
         header {
             position: relative;
             z-index: 10;
+            isolation: isolate;
             text-align: center;
             padding: 48px 20px 32px;
             border-bottom: 1px solid var(--border);
@@ -150,6 +151,7 @@
             position: sticky;
             top: 0;
             z-index: 20;
+            isolation: isolate;
             max-width: 840px;
             margin: 0 auto;
             background: rgba(15, 15, 15, 0.92);
@@ -187,6 +189,7 @@
         main {
             position: relative;
             z-index: 5;
+            isolation: isolate;
             max-width: 880px;
             margin: 0 auto;
             padding: 40px 20px 80px;
@@ -313,7 +316,8 @@
         /* ── Footer ── */
         footer {
             position: relative;
-            z-index: 1;
+            z-index: 5;
+            isolation: isolate;
             text-align: center;
             padding: 24px 20px;
             border-top: 1px solid var(--border);
