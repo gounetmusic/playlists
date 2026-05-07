@@ -66,19 +66,19 @@
             z-index: -2;
             overflow: hidden;
             display: grid;
-            grid-template-columns: repeat(auto-fill, 50px);
-            grid-auto-rows: 50px;
+            grid-template-columns: repeat(auto-fill, 100px);
+            grid-auto-rows: 100px;
             justify-content: center;
             align-content: start;
-            filter: blur(2px) saturate(0.9);
+            filter: saturate(0.9);
             transform: scale(1.04);
             opacity: 0.35;
             pointer-events: none;
         }
 
         .mosaic-tile {
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             background-size: cover;
             background-position: center;
         }
@@ -804,12 +804,12 @@
             const mosaic = document.getElementById('background-mosaic');
             if (!mosaic || !covers.length) return;
 
-            const cols = Math.ceil(window.innerWidth / 50) + 2;
-            const rows = Math.ceil(window.innerHeight / 50) + 2;
+            const cols = Math.ceil(window.innerWidth / 100) + 2;
+            const rows = Math.ceil(window.innerHeight / 100) + 2;
             const tilesCount = cols * rows;
 
             mosaic.innerHTML = '';
-            mosaic.style.gridTemplateColumns = `repeat(${cols}, 50px)`;
+            mosaic.style.gridTemplateColumns = `repeat(${cols}, 100px)`;
 
             for (let i = 0; i < tilesCount; i++) {
                 const tile = document.createElement('div');
