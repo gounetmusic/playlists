@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Template</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,100&display=swap');
+
+        :root {
+            --bg: #0f0f0f;
+            --text: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .layout {
+            width: 100%;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .left-pane {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .main-image {
+            width: 1000px;
+            height: 1000px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 16px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .right-pane {
+            position: relative;
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .artist-crop {
+            position: absolute;
+            left: 50%;
+            top: 66.666%;
+            transform: translate(-50%, -50%);
+            width: min(90%, 700px);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #000000;
+            aspect-ratio: 4 / 0.95;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 16px;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .track-title-container {
+            position: relative;
+            isolation: isolate;
+            font-size: clamp(2rem, 4vw, 4rem);
+            font-weight: 600;
+            color: #ffffff;
+            text-transform: none;
+            line-height: 1.1;
+            text-align: center;
+        }
+
+        .track-title-container::before {
+            content: attr(data-text);
+            position: absolute;
+            left: -2px;
+            top: 0;
+            color: #ff0050;
+            z-index: -1;
+        }
+
+        .track-title-container::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 2px;
+            top: 0;
+            color: #00f2ea;
+            z-index: -1;
+        }
+
+        .artist-name {
+            margin-top: 2px;
+            font-size: clamp(1.1rem, 2.2vw, 2.2rem);
+            font-weight: 100;
+            font-style: oblique 10deg;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        @media (max-width: 2100px) {
+            .main-image {
+                width: min(46vw, 1000px);
+                height: min(46vw, 1000px);
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .layout {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+            }
+
+            .right-pane {
+                min-height: 45vh;
+            }
+
+            .artist-crop {
+                position: static;
+                transform: none;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="layout">
+        <section class="left-pane">
+            <img class="main-image" src="https://cdn-images.dzcdn.net/images/cover/e40f1b8bf9ff64229814ebec7781cc40-b7ee6ebc4ec4905be6d422c8ad00930c-2ada5132e1e77a1779ff71125021cb60-1985d3adb93a669c20963f58b733c217/1000x1000-000000-80-0-0.jpg" alt="Cover playlist">
+        </section>
+        <section class="right-pane">
+            <div class="artist-crop">
+                <div class="track-title-container" data-text="Techno Playlist">Techno Playlist</div>
+                <div class="artist-name">by &ME</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
