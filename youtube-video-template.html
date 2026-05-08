@@ -8,7 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,100&display=swap');
 
         :root {
-            --bg: #0f0f0f;
+            --bg: #000000;
             --text: #ffffff;
         }
 
@@ -72,6 +72,15 @@
             font-family: "Montserrat", sans-serif;
         }
 
+        .artist-name {
+            margin-top: 2px;
+            font-size: 1.5rem;
+            font-weight: 100; /* Très fin */
+            font-style: oblique 10deg;
+            color: rgba(255, 255, 255, 0.70); /* Couleur spécifiée dans votre JSON */
+            letter-spacing: 2px;
+        }     
+
         .track-title-container {
             position: relative;
             isolation: isolate;
@@ -86,7 +95,7 @@
         .track-title-container::before {
             content: attr(data-text);
             position: absolute;
-            left: -2px;
+            left: -3px;
             top: 0;
             color: #ff0050;
             z-index: -1;
@@ -95,20 +104,13 @@
         .track-title-container::after {
             content: attr(data-text);
             position: absolute;
-            left: 2px;
+            left: 3px;
             top: 0;
             color: #00f2ea;
             z-index: -1;
         }
 
-        .artist-name {
-            margin-top: 2px;
-            font-size: 1.0rem;
-            font-weight: 100; /* Très fin */
-            font-style: oblique 10deg;
-            color: rgba(255, 255, 255, 0.70); /* Couleur spécifiée dans votre JSON */
-            letter-spacing: 2px;
-        }           
+    
 
         @media (max-width: 2100px) {
             .main-image {
