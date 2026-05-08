@@ -72,6 +72,7 @@
 
         .track-title-container {
             position: relative;
+            isolation: isolate;
             display: inline-block;
             font-size: clamp(1.5rem, 2.5vw, 2.6rem);
             font-weight: 500;
@@ -79,27 +80,24 @@
             text-transform: none;
             line-height: 1.1;
             text-align: center;
-            text-shadow: -2px 0 #ff0050, 2px 0 #00f2ea;
         }
 
         .track-title-container::before {
             content: attr(data-text);
             position: absolute;
-            left: -2px;
+            left: -3px;
             top: 0;
             color: #ff0050;
-            opacity: 0.85;
-            z-index: 0;
+            z-index: -1;
         }
 
         .track-title-container::after {
             content: attr(data-text);
             position: absolute;
-            left: 2px;
+            left: 3px;
             top: 0;
             color: #00f2ea;
-            opacity: 0.85;
-            z-index: 0;
+            z-index: -1;
         }
 
         .artist-name {
