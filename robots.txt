@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gounetmusic.github.io/playlists/sitemap.xml
+Sitemap: https://playlists.loved.music/sitemap.xml
