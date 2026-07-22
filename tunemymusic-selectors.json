@@ -1,0 +1,122 @@
+{
+  "steps": [
+    {
+      "key": "cookieConsent",
+      "type": "click",
+      "required": false,
+      "selectors": [
+        "button:has-text(\"Accept\")",
+        "button:has-text(\"I agree\")",
+        "button:has-text(\"Agree\")"
+      ],
+      "texts": [
+        "Accept",
+        "I agree",
+        "Agree"
+      ]
+    },
+    {
+      "key": "letsStart",
+      "type": "click",
+      "required": false,
+      "selectors": [
+        "button:has-text(\"Let's Start\")",
+        "button:has-text(\"Lets Start\")",
+        "a:has-text(\"Let's Start\")"
+      ],
+      "texts": [
+        "Let's Start",
+        "Lets Start",
+        "Commencer"
+      ]
+    },
+    {
+      "key": "uploadFile",
+      "type": "upload",
+      "required": true,
+      "selectors": [
+        "button:has-text(\"Upload File\")",
+        "button:has-text(\"Upload file\")",
+        "button:has-text(\"Upload\")",
+        "button:has-text(\"From File\")",
+        "button:has-text(\"Choose file\")",
+        "label:has-text(\"Upload File\")",
+        "label:has-text(\"Upload\")",
+        "a:has-text(\"Upload File\")",
+        "a:has-text(\"Upload\")",
+        "div:has-text(\"Upload File\")",
+        "span:has-text(\"Upload File\")"
+      ],
+      "texts": [
+        "Upload File",
+        "Upload file",
+        "Upload",
+        "From File",
+        "Choose file"
+      ]
+    },
+    {
+      "key": "continue",
+      "type": "click",
+      "required": true,
+      "waitAfterMs": 1000,
+      "selectors": [
+        "button:has-text(\"Continue\")",
+        "button:has-text(\"Next\")",
+        "button:has-text(\"Confirm\")"
+      ],
+      "texts": [
+        "Continue",
+        "Next",
+        "Confirm"
+      ]
+    },
+    {
+      "key": "ok",
+      "type": "click",
+      "required": true,
+      "selectors": [
+        "button:has-text(\"OK\")",
+        "button:has-text(\"Ok\")",
+        "button:has-text(\"Confirm\")"
+      ],
+      "texts": [
+        "OK",
+        "Ok",
+        "Confirm"
+      ]
+    },
+    {
+      "key": "chooseDestination",
+      "type": "click",
+      "required": true,
+      "selectors": [
+        "button:has-text(\"Choose Destination\")",
+        "button:has-text(\"Choose destination\")",
+        "button:has-text(\"Destination\")",
+        "a:has-text(\"Choose Destination\")"
+      ],
+      "texts": [
+        "Choose Destination",
+        "Choose destination",
+        "Destination"
+      ]
+    },
+    {
+      "key": "share",
+      "type": "click",
+      "required": true,
+      "selectors": [
+        "button[aria-label=\"Share\"]",
+        "button[name=\"Share\"]",
+        "button:has-text(\"Share\")",
+        "a:has-text(\"Share\")",
+        "div:has-text(\"Share\")",
+        "div[class*=\"blockText\"]:has-text(\"Share\")"
+      ],
+      "texts": [
+        "Share"
+      ]
+    }
+  ]
+}
