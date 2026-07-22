@@ -115,8 +115,7 @@
         "div[class*=\"blockText\"]:has-text(\"Share\")"
       ],
       "texts": [
-        "Share",
-        "Test"
+        "Share"
       ]
     }
   ]
