@@ -142,6 +142,41 @@
             white-space: nowrap;
         }
 
+        /* ── Header CTA ── */
+        .header-cta {
+            margin-top: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .header-cta:hover {
+            background: var(--card-hover);
+            border-color: var(--border-hover);
+            transform: translateY(-1px);
+        }
+
+        .header-cta:hover .header-cta-text {
+            text-shadow: -1px 0 var(--accent), 1px 0 var(--accent2);
+            animation: artist-glitch 300ms steps(2, end) 1;
+        }
+
+        .header-cta-icon {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+
         /* ── Alphabet Nav ── */
         .alpha-nav {
             position: sticky;
@@ -357,6 +392,10 @@
         <div class="header-card">
             <div class="site-title" data-text="Playlists">Playlists</div>
             <div class="site-subtitle">Curated Music for Hours of Listening</div>
+            <a href="https://loved.music" class="header-cta" target="_blank" rel="noopener noreferrer">
+                <img src="https://loved.music/vinyl.svg" alt="" class="header-cta-icon" aria-hidden="true">
+                <span class="header-cta-text">Create Your Own Playlist at Loved Music</span>
+            </a>
         </div>
     </header>
 
