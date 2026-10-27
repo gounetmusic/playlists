@@ -143,8 +143,15 @@
         }
 
         /* ── Header CTA ── */
-        .header-cta {
+        .header-ctas {
             margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .header-cta {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -175,6 +182,10 @@
             width: 16px;
             height: 16px;
             border-radius: 50%;
+        }
+
+        svg.header-cta-icon {
+            border-radius: 0;
         }
 
         /* ── Alphabet Nav ── */
@@ -392,10 +403,22 @@
         <div class="header-card">
             <div class="site-title" data-text="Playlists">Playlists</div>
             <div class="site-subtitle">Curated Music for Hours of Listening</div>
-            <a href="https://loved.music" class="header-cta" target="_blank" rel="noopener noreferrer">
-                <img src="https://loved.music/vinyl.svg" alt="" class="header-cta-icon" aria-hidden="true">
-                <span class="header-cta-text">Create Your Own Playlist at Loved Music</span>
-            </a>
+            <div class="header-ctas">
+                <a href="https://loved.music" class="header-cta" target="_blank" rel="noopener noreferrer">
+                    <img src="https://loved.music/vinyl.svg" alt="" class="header-cta-icon" aria-hidden="true">
+                    <span class="header-cta-text">Create Your Own Playlist at Loved Music</span>
+                </a>
+                <a href="https://loved.music/blog" class="header-cta" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header-cta-icon" aria-hidden="true">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
+                        <path d="M8 8l4 0" />
+                        <path d="M8 12l4 0" />
+                        <path d="M8 16l4 0" />
+                    </svg>
+                    <span class="header-cta-text">Read the Loved Music Blog</span>
+                </a>
+            </div>
         </div>
     </header>
 
